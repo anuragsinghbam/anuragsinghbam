@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="89" height="100" viewBox="0 0 89 100">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #051441;
+        fill-rule: evenodd;
+        filter: url(#filter);
+      }
+    </style>
+    <filter id="filter" x="1332" y="1715" width="89" height="100" filterUnits="userSpaceOnUse">
+      <feImage preserveAspectRatio="none" x="1332" y="1715" width="89" height="100" result="image" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iODkiIGhlaWdodD0iMTAwIiB2aWV3Qm94PSIwIDAgODkgMTAwIj4KICA8ZGVmcz4KICAgIDxzdHlsZT4KICAgICAgLmNscy0xIHsKICAgICAgICBmaWxsOiB1cmwoI2xpbmVhci1ncmFkaWVudCk7CiAgICAgIH0KICAgIDwvc3R5bGU+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImxpbmVhci1ncmFkaWVudCIgeTE9IjUwIiB4Mj0iODkiIHkyPSI1MCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiNmZTQyMmYiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjZmU1MTk2Ii8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICA8cmVjdCBjbGFzcz0iY2xzLTEiIHdpZHRoPSI4OSIgaGVpZ2h0PSIxMDAiLz4KPC9zdmc+Cg=="/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <path class="cls-1" d="M1393.15,1759.06a27.97,27.97,0,1,0,27.85,27.97A27.939,27.939,0,0,0,1393.15,1759.06Zm1.07,2.16,0.42,0.03a25.739,25.739,0,0,1,24.18,24.28l0.03,0.43h-24.63v-24.74Zm16.02,45.09a25.769,25.769,0,1,1-18.58-45.06l0.43-.03v25.81a1.083,1.083,0,0,0,.31.76l18.16,18.24Zm8.58-17.78a25.936,25.936,0,0,1-6.47,15.66l-0.28.32-16.34-16.41h23.12Zm-57.56,1.54a37.183,37.183,0,0,1-17.36-60.92l0.29-.31,26.46,26.58h37.4l-0.02.42c-0.03.68-.07,1.34-0.13,1.97a1.058,1.058,0,0,0,.24.78,1.058,1.058,0,0,0,1.88-.58c0.12-1.23.18-2.48,0.18-3.74a39.056,39.056,0,1,0-49.51,37.87,1.358,1.358,0,0,0,.29.03A1.07,1.07,0,0,0,1361.26,1790.07ZM1346,1727.04a36.964,36.964,0,0,1,62.04,25.82l0.01,0.42h-36.51l-25.85-25.96Z" transform="translate(-1332 -1715)"/>
+</svg>

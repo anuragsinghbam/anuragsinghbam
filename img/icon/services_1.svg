@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="77.188" height="67.5" viewBox="0 0 77.188 67.5">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #051441;
+        fill-rule: evenodd;
+        filter: url(#filter);
+      }
+    </style>
+    <filter id="filter" x="405" y="772.75" width="77.188" height="67.5" filterUnits="userSpaceOnUse">
+      <feImage preserveAspectRatio="none" x="405" y="772.75" width="77.188" height="67.5" result="image" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iNzcuMTg4IiBoZWlnaHQ9IjY3LjUiIHZpZXdCb3g9IjAgMCA3Ny4xODggNjcuNSI+CiAgPGRlZnM+CiAgICA8c3R5bGU+CiAgICAgIC5jbHMtMSB7CiAgICAgICAgZmlsbDogdXJsKCNsaW5lYXItZ3JhZGllbnQpOwogICAgICB9CiAgICA8L3N0eWxlPgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJsaW5lYXItZ3JhZGllbnQiIHgxPSI0Ljg0NCIgeDI9IjcyLjM0NCIgeTI9IjY3LjUiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjZmQ1MzkyIiBzdG9wLW9wYWNpdHk9IjAuOTk2Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2Y4NmY2NCIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHJlY3QgY2xhc3M9ImNscy0xIiB3aWR0aD0iNzcuMTg4IiBoZWlnaHQ9IjY3LjUiLz4KPC9zdmc+Cg=="/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <path class="cls-1" d="M478.636,811.606a35.776,35.776,0,0,0-9.086-23.588,35.248,35.248,0,0,0-13.25-9.253l-2.575-1.016H464.4v-1.394H447.838v-3.606h-8.482v3.606H422.791v1.394H433.47l-2.576,1.016a35.222,35.222,0,0,0-13.249,9.253,35.772,35.772,0,0,0-9.087,23.588l0,0.521H405v8.606h8.482v-8.606h-3.555l0-.53a34.372,34.372,0,0,1,8.729-22.642,33.555,33.555,0,0,1,20.1-10.854l0.592-.087v3.341h8.482v-3.341l0.592,0.086a33.567,33.567,0,0,1,20.1,10.855,34.37,34.37,0,0,1,8.729,22.642l0,0.53h-3.555v8.606h8.482v-8.606h-3.553Zm-66.528,1.915v5.818h-5.734v-5.818h5.734Zm34.356-33.56H440.73v-5.817h5.734v5.817Zm34.356,39.378h-5.734v-5.818h5.734v5.818Zm-9.975-37.984a4.3,4.3,0,1,0-4.241-4.3A4.278,4.278,0,0,0,470.845,781.355Zm0-7.211a2.909,2.909,0,1,1-2.867,2.908A2.891,2.891,0,0,1,470.845,774.144Zm-54.5,7.211a4.3,4.3,0,1,0-4.241-4.3A4.277,4.277,0,0,0,416.349,781.355Zm0-7.211a2.909,2.909,0,1,1-2.867,2.908A2.891,2.891,0,0,1,416.349,774.144Zm15.92,66.1h22.657v-1.394H432.269v1.394Zm2.348-5.324v1.7h1.374v-2.058l-5.817-10.623,13.423-22.7,13.423,22.7L451.2,834.563v2.058h1.374v-1.7l6.03-11.011-15.01-25.38-15.01,25.38Zm8.293,1.7h1.374v-12h1.164v-1.394h-3.7v1.394h1.164v12Z" transform="translate(-405 -772.75)"/>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="180" viewBox="0 0 100 90">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #051441;
+        fill-rule: evenodd;
+        filter: url(#filter);
+      }
+    </style>
+    <filter id="filter" x="491" y="1092" width="100" height="90" filterUnits="userSpaceOnUse">
+      <feImage preserveAspectRatio="none" x="491" y="1092" width="100" height="90" result="image" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjkwIiB2aWV3Qm94PSIwIDAgMTAwIDkwIj4KICA8ZGVmcz4KICAgIDxzdHlsZT4KICAgICAgLmNscy0xIHsKICAgICAgICBmaWxsOiB1cmwoI2xpbmVhci1ncmFkaWVudCk7CiAgICAgIH0KICAgIDwvc3R5bGU+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImxpbmVhci1ncmFkaWVudCIgeDE9IjUiIHgyPSI5NSIgeTI9IjkwIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iI2ZkNTM5MiIgc3RvcC1vcGFjaXR5PSIwLjk5NiIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNmODZmNjQiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxyZWN0IGNsYXNzPSJjbHMtMSIgd2lkdGg9IjEwMCIgaGVpZ2h0PSI5MCIvPgo8L3N2Zz4K"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <path class="cls-1" d="M590.172,1127.1l-10.882-3.62v-24.44a7.064,7.064,0,0,0-14.128,0v1.91l-45.866,18.3H505.87a14.826,14.826,0,0,0-3.427,29.26l0.447,0.1,7.657,32.46a1.2,1.2,0,0,0,1.176.93,1.65,1.65,0,0,0,.224-0.02l14.708-2.83a4.077,4.077,0,0,0,1.9-1.04,3.928,3.928,0,0,0,.024-5.57l-2.1-2.1-5.2-20.74,43.884,17.51v1.91a7.064,7.064,0,0,0,14.128,0v-24.44l10.883-3.62a1.2,1.2,0,0,0,.827-1.14v-11.68A1.2,1.2,0,0,0,590.172,1127.1Zm-96.754,6.98a12.449,12.449,0,0,1,12.452-12.42h12.453v24.84H505.87A12.449,12.449,0,0,1,493.418,1134.08Zm30.8,37.27a1.144,1.144,0,0,0,.318.56l2.334,2.33a1.515,1.515,0,0,1-.011,2.15,1.429,1.429,0,0,1-.7.39l-0.043.01-13.478,2.6-7.191-30.48h13.141Zm40.946-6.74-44.421-17.72v-25.62l44.421-17.72v61.06Zm11.71,4.51a4.646,4.646,0,0,1-9.292,0v-70.08a4.646,4.646,0,0,1,9.292,0v70.08Zm11.71-30.07-9.292,3.09v-16.12l9.292,3.09v9.94Z" transform="translate(-491 -1092)"/>
+</svg>

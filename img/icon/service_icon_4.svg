@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="178" height="200" viewBox="0 0 89 100">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #051441;
+        fill-rule: evenodd;
+        filter: url(#filter);
+      }
+    </style>
+    <filter id="filter" x="1332" y="773" width="89" height="100" filterUnits="userSpaceOnUse">
+      <feImage preserveAspectRatio="none" x="1332" y="773" width="89" height="100" result="image" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iODkiIGhlaWdodD0iMTAwIiB2aWV3Qm94PSIwIDAgODkgMTAwIj4KICA8ZGVmcz4KICAgIDxzdHlsZT4KICAgICAgLmNscy0xIHsKICAgICAgICBmaWxsOiB1cmwoI2xpbmVhci1ncmFkaWVudCk7CiAgICAgIH0KICAgIDwvc3R5bGU+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImxpbmVhci1ncmFkaWVudCIgeDE9Ijg5IiB5MT0iOTQuNSIgeDI9IjAiIHkyPSI1LjUiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjZmQ1MzkyIiBzdG9wLW9wYWNpdHk9IjAuOTk2Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2Y4NmY2NCIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHJlY3QgY2xhc3M9ImNscy0xIiB3aWR0aD0iODkiIGhlaWdodD0iMTAwIi8+Cjwvc3ZnPgo="/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <path class="cls-1" d="M1393.15,817.062A27.968,27.968,0,1,0,1421,845.03,27.936,27.936,0,0,0,1393.15,817.062Zm1.07,2.161,0.42,0.024a25.744,25.744,0,0,1,24.18,24.285l0.03,0.427h-24.63V819.223Zm16.02,45.087a25.77,25.77,0,1,1-18.58-45.063l0.43-.024V845.03a1.072,1.072,0,0,0,.31.757l18.16,18.239Zm8.58-17.783a25.957,25.957,0,0,1-6.47,15.666l-0.28.319L1395.73,846.1h23.12Zm-57.56,1.543a37.186,37.186,0,0,1-17.36-60.923l0.29-.309,26.46,26.585h37.4l-0.02.421c-0.03.678-.07,1.338-0.13,1.963a1.065,1.065,0,1,0,2.12.2c0.12-1.226.18-2.484,0.18-3.739a39.061,39.061,0,1,0-49.51,37.865,1.058,1.058,0,0,0,.29.038A1.072,1.072,0,0,0,1361.26,848.07ZM1346,785.036a36.965,36.965,0,0,1,62.04,25.827l0.01,0.419h-36.51l-25.85-25.96Z" transform="translate(-1332 -773)"/>
+</svg>
