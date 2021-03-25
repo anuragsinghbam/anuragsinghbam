@@ -22,3 +22,20 @@
 #success {
   color: green;
 }
+
+.sidebar_part .single_sidebar .sidebar_tag_list .cu_btn {
+  margin: 0 7px 10px 0;
+  padding: 14px 22px;
+}
+
+.cu_btn.tag_btn {
+  font-size: 18px;
+}
+
+.contact_form textarea, .contact_form .cu_btn, .cu_input {
+  border-radius: 5px;
+}
+
+.whatsapp {
+  font-size: 1.6em;
+}
