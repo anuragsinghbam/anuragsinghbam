@@ -1,18 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600&display=swap');
 
-
 .my-logo {
   font-family: 'Dancing Script', cursive;
 }
 
-
 .cu_btn.tag_btn {
   color: #111015;
   text-transform: none;
-  
 }
 
-@media (min-width: 990px) { 
+@media (min-width: 990px) {
   .skill-container {
     width: 85%;
     margin-left: auto;
@@ -30,12 +27,39 @@
 
 .cu_btn.tag_btn {
   font-size: 18px;
+  cursor: default;
 }
 
-.contact_form textarea, .contact_form .cu_btn, .cu_input {
+.contact_form textarea,
+.contact_form .cu_btn,
+.cu_input {
   border-radius: 5px;
 }
 
 .whatsapp {
   font-size: 1.6em;
+}
+
+.my-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.phone-icon {
+  margin-right: 3em;
+}
+
+@media (max-width: 768px) {
+  .my-logo {
+    font-size: 1.5em;
+  }
+
+  .phone-icon {
+    margin-right: 2em;
+  }
+}
+
+.my-nav {
+  align-items: center;
 }
