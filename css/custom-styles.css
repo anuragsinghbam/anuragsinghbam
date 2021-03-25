@@ -63,3 +63,8 @@
 .my-nav {
   align-items: center;
 }
+
+
+.single_contact_form label {
+  color: white;
+}
