@@ -14,15 +14,15 @@ $(document).ready(function(){
             rules: {
                 name: {
                     required: true,
-                    minlength: 2
+                    minlength: 0
                 },
                 subject: {
                     required: true,
-                    minlength: 4
+                    minlength: 0
                 },
                 number: {
                     required: true,
-                    minlength: 5
+                    minlength: 0
                 },
                 email: {
                     required: true,
@@ -30,7 +30,7 @@ $(document).ready(function(){
                 },
                 message: {
                     required: true,
-                    minlength: 2
+                    minlength: 0
                 }
             },
             messages: {
@@ -44,7 +44,7 @@ $(document).ready(function(){
                 },
                 number: {
                     required: "Enter your contact number",
-                    minlength: "your Number must consist of at least 5 characters"
+                    minlength: ""
                 },
                 email: {
                     required: "Please enter your mail ID"
