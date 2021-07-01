@@ -6,6 +6,10 @@
   --light: #ffffff;
 }
 
+.lorem {
+  color: #000000;
+}
+
 body {
   color: var(--light);
   margin: 0;
@@ -23,18 +27,27 @@ a {
   text-decoration: none;
 }
 
-main {
-  background: var(--dark);
-  height: 100vh;
+ul {
+  padding: 0;
 }
 
-main .hero-section {
+li {
+  list-style: none;
+}
+
+.main-seciton {
+  background: var(--dark);
+  min-height: 100vh;
+}
+
+.main-seciton .hero-section {
   width: 80%;
   margin: 0 auto;
   max-width: 1600px;
+  pointer-events: none;
 }
 
-main .hero-section .navbar {
+.main-seciton .hero-section .navbar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -44,68 +57,83 @@ main .hero-section .navbar {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 0 auto;
   max-width: 1170px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  z-index: 30;
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: 0;
 }
 
-main .hero-section .navbar .logo {
+.main-seciton .hero-section .navbar .logo {
   font-family: 'Dancing Script', cursive;
   font-size: 1.5em;
   font-weight: 700;
+  pointer-events: all;
 }
 
-main .hero-section .navbar h2 {
+.main-seciton .hero-section .navbar h2 {
   margin-top: 0.5em;
 }
 
-main .hero-section .navbar .nav-links {
+.main-seciton .hero-section .navbar.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.main-seciton .hero-section .navbar .nav-links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  pointer-events: all;
 }
 
-main .hero-section .navbar .nav-links div {
+.main-seciton .hero-section .navbar .nav-links div {
   cursor: pointer;
 }
 
-main .hero-section .navbar .nav-links .moon-icon {
+.main-seciton .hero-section .navbar .nav-links .moon-icon {
   display: none;
 }
 
-main .hero-section .navbar .nav-links .phone-icon:hover {
+.main-seciton .hero-section .navbar .nav-links .phone-icon:hover {
   -webkit-animation: shake 4s ease-in-out infinite;
           animation: shake 4s ease-in-out infinite;
 }
 
-main .hero-section .navbar .nav-links .whatsapp-icon-img {
+.main-seciton .hero-section .navbar .nav-links .whatsapp-icon-img {
   -webkit-transition: -webkit-transform 0.2s ease-in-out;
   transition: -webkit-transform 0.2s ease-in-out;
   transition: transform 0.2s ease-in-out;
   transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
 }
 
-main .hero-section .navbar .nav-links .whatsapp-icon-img:hover {
+.main-seciton .hero-section .navbar .nav-links .whatsapp-icon-img:hover {
   -webkit-animation: popShake 4s ease-in-out infinite;
           animation: popShake 4s ease-in-out infinite;
 }
 
-main .hero-section .navbar .nav-links .sun-icon-img {
+.main-seciton .hero-section .navbar .nav-links .sun-icon-img {
   -webkit-transition: -webkit-transform 0.2s;
   transition: -webkit-transform 0.2s;
   transition: transform 0.2s;
   transition: transform 0.2s, -webkit-transform 0.2s;
 }
 
-main .hero-section .navbar .nav-links .sun-icon-img:hover {
+.main-seciton .hero-section .navbar .nav-links .sun-icon-img:hover {
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
 }
 
-main .hero-section .navbar .nav-links div + div {
+.main-seciton .hero-section .navbar .nav-links div + div {
   margin-left: 2.5em;
 }
 
-main .hero-section .hero-section-text {
+.main-seciton .hero-section .hero-section-text {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-70%);
@@ -114,40 +142,43 @@ main .hero-section .hero-section-text {
   left: 0;
 }
 
-main .hero-section .hero-section-text .hero-content {
+.main-seciton .hero-section .hero-section-text .hero-content {
   width: 80%;
   max-width: 1170px;
   margin: 0 auto;
   padding: 0 2em;
 }
 
-main .hero-section .hero-section-text .hero-content h1 {
+.main-seciton .hero-section .hero-section-text .hero-content h1 {
   font-size: 4em;
   font-family: 'Spartan', sans-serif;
   margin: 0;
 }
 
-main .hero-section .hero-section-text .hero-content p {
+.main-seciton .hero-section .hero-section-text .hero-content p {
   font-family: 'Merriweather', serif;
   font-style: italic;
   margin: 1.25em 0 2.25em;
 }
 
-main .hero-section .hero-section-text .hero-content .about-me-btn {
+.main-seciton .hero-section .hero-section-text .hero-content .about-me-btn {
   display: inline-block;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#ef3837), to(#f06248));
-  background-image: linear-gradient(#ef3837, #f06248);
+  background-image: -webkit-gradient(linear, left top, right top, from(#2694D4), to(#5A53E0));
+  background-image: linear-gradient(to right, #2694D4, #5A53E0);
+  background-color: #4595EB;
+  border-radius: 5px;
   padding: 0.6em 1.25em;
   font-weight: 800;
   position: relative;
   cursor: pointer;
+  pointer-events: all;
 }
 
-main .hero-section .hero-section-text .hero-content .about-me-btn:hover .right-arrow {
+.main-seciton .hero-section .hero-section-text .hero-content .about-me-btn:hover .right-arrow {
   right: -25%;
 }
 
-main .hero-section .hero-section-text .hero-content .right-arrow {
+.main-seciton .hero-section .hero-section-text .hero-content .right-arrow {
   position: absolute;
   top: 10%;
   right: -20%;
@@ -155,7 +186,22 @@ main .hero-section .hero-section-text .hero-content .right-arrow {
   transition: right 0.2s ease-in-out;
 }
 
-main .hero-section .about-section {
+.main-seciton .hero-section .hero-section-text .name-logo {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 650px;
+  -webkit-transform: translate(-50%, -40%);
+          transform: translate(-50%, -40%);
+  z-index: -2;
+  opacity: 0.4;
+}
+
+.main-seciton .hero-section .hero-section-text .name-logo img {
+  width: 100%;
+}
+
+.main-seciton .hero-section .about-section {
   width: 90%;
   max-width: 1200px;
   height: 700px;
@@ -163,15 +209,59 @@ main .hero-section .about-section {
   border-radius: 10px;
   position: fixed;
   top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  left: 25%;
+  pointer-events: none;
+  -webkit-transform: translate(-50%, -45%) scale(0);
+          transform: translate(-50%, -45%) scale(0);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  overflow: hidden;
+  z-index: 10;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
-main .hero-section .about-section .about-me {
+.main-seciton .hero-section .about-section .x-icon {
+  background: #666af6;
+  background: #27292d;
+  border-radius: 50%;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  right: 15px;
+  top: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 0.15s ease-in-out;
+  transition: -webkit-transform 0.15s ease-in-out;
+  transition: transform 0.15s ease-in-out;
+  transition: transform 0.15s ease-in-out, -webkit-transform 0.15s ease-in-out;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.75);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.75);
+}
+
+.main-seciton .hero-section .about-section .x-icon img {
+  vertical-align: middle;
+  width: 50%;
+}
+
+.main-seciton .hero-section .about-section .x-icon:hover {
+  -webkit-transform: rotate(90deg) scale(1.05);
+          transform: rotate(90deg) scale(1.05);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.main-seciton .hero-section .about-section .about-me {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -181,34 +271,51 @@ main .hero-section .about-section .about-me {
           align-items: center;
 }
 
-main .hero-section .about-section .about-me .about-me-text {
+.main-seciton .hero-section .about-section .about-me .about-me-text {
   width: 65%;
   margin: 0 auto;
 }
 
-main .hero-section .about-section .about-me .about-me-text .about-me-subtitle {
-  font-size: 0.8em;
+.main-seciton .hero-section .about-section .about-me .about-me-text .mern {
+  margin-bottom: 2.2em;
+  margin-top: 4em;
 }
 
-main .hero-section .about-section .about-me .about-me-text .top-skills-icons {
+.main-seciton .hero-section .about-section .about-me .about-me-text .top-skills-icons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-top: 1.5em;
+  position: relative;
 }
 
-main .hero-section .about-section .about-me .about-me-text .top-skills-icons h2 {
+.main-seciton .hero-section .about-section .about-me .about-me-text .top-skills-icons h2 {
   margin-top: 0.5em;
 }
 
-main .hero-section .about-section .about-me .about-me-text .top-skills-icons .tooltip {
-  background-color: #8CC84B;
-  color: var(--dark);
-  padding: 0.5em 1em;
-  border-radius: 50px;
+.main-seciton .hero-section .about-section .about-me .about-me-text .top-skills-icons .mongodb-icon .tooltip,
+.main-seciton .hero-section .about-section .about-me .about-me-text .top-skills-icons .mongodb-icon .tooltip::after {
+  background-color: #47a248;
+  color: #ffffff;
 }
 
-main .hero-section .about-section .about-me .about-me-text .top-skills-icons div {
+.main-seciton .hero-section .about-section .about-me .about-me-text .top-skills-icons .express-icon .tooltip,
+.main-seciton .hero-section .about-section .about-me .about-me-text .top-skills-icons .express-icon .tooltip::after {
+  background-color: #ffffff;
+}
+
+.main-seciton .hero-section .about-section .about-me .about-me-text .top-skills-icons .react-icon .tooltip,
+.main-seciton .hero-section .about-section .about-me .about-me-text .top-skills-icons .react-icon .tooltip::after {
+  background-color: #61dafb;
+}
+
+.main-seciton .hero-section .about-section .about-me .about-me-text .top-skills-icons .node-icon .tooltip,
+.main-seciton .hero-section .about-section .about-me .about-me-text .top-skills-icons .node-icon .tooltip::after {
+  background-color: #8cc84b;
+  margin-left: -2px;
+}
+
+.main-seciton .hero-section .about-section .about-me .about-me-text .top-skills-icons div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -221,11 +328,44 @@ main .hero-section .about-section .about-me .about-me-text .top-skills-icons div
           align-items: center;
 }
 
-main .hero-section .about-section .about-me .about-me-text .top-skills-icons div + div {
+.main-seciton .hero-section .about-section .about-me .about-me-text .top-skills-icons div .tooltip {
+  background-color: #8cc84b;
+  color: var(--dark);
+  padding: 0.5em 1.25em;
+  font-weight: 600;
+  border-radius: 50px;
+  position: absolute;
+  margin-bottom: 2em;
+  top: -1.25em;
+  -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.main-seciton .hero-section .about-section .about-me .about-me-text .top-skills-icons div .tooltip::after {
+  content: '';
+  width: 12px;
+  height: 12px;
+  background: #8cc84b;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  position: absolute;
+  bottom: -6px;
+}
+
+.main-seciton .hero-section .about-section .about-me .about-me-text .top-skills-icons div:hover .tooltip {
+  opacity: 1;
+  top: -3.25em;
+}
+
+.main-seciton .hero-section .about-section .about-me .about-me-text .top-skills-icons div + div {
   margin-left: 2em;
 }
 
-main .hero-section .about-section .illustration {
+.main-seciton .hero-section .about-section .illustration {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -235,13 +375,121 @@ main .hero-section .about-section .illustration {
           align-items: center;
 }
 
-main .hero-section .about-section .illustration .coder-img {
+.main-seciton .hero-section .about-section .illustration .coder-img {
   width: 100%;
 }
 
-@-webkit-keyframes breathing {}
+.main-seciton .hero-section .about-section.active {
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+  left: 50%;
+  pointer-events: all;
+}
 
-@keyframes breathing {}@-webkit-keyframes popShake {
+.main-seciton .social-links {
+  position: absolute;
+  font-size: 2em;
+  right: 1em;
+  top: 44%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  pointer-events: all;
+}
+
+.main-seciton .social-links li + li {
+  margin-top: 0.5em;
+}
+
+.main-seciton .social-links i {
+  color: #B0B2C3;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+.main-seciton .social-links li:hover i {
+  color: #fff;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.main-seciton .social-links .facebook-icon {
+  margin-left: 4px;
+}
+
+.main-seciton .social-links.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.main-seciton #wrapper-canvas {
+  z-index: 10;
+  pointer-events: scroll;
+}
+
+.main-seciton .overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--dark);
+  opacity: 0;
+  z-index: 9;
+  pointer-events: none;
+}
+
+.main-seciton .overlay.active {
+  opacity: 0.7;
+  pointer-events: all;
+}
+
+@-webkit-keyframes breathing {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  25% {
+    -webkit-transform: translateY(-1em);
+            transform: translateY(-1em);
+  }
+  50% {
+    -webkit-transform: translateY(0em);
+            transform: translateY(0em);
+  }
+  75% {
+    -webkit-transform: translateY(1em);
+            transform: translateY(1em);
+  }
+  100% {
+    -webkit-transform: translateY(0em);
+            transform: translateY(0em);
+  }
+}
+
+@keyframes breathing {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  25% {
+    -webkit-transform: translateY(-1em);
+            transform: translateY(-1em);
+  }
+  50% {
+    -webkit-transform: translateY(0em);
+            transform: translateY(0em);
+  }
+  75% {
+    -webkit-transform: translateY(1em);
+            transform: translateY(1em);
+  }
+  100% {
+    -webkit-transform: translateY(0em);
+            transform: translateY(0em);
+  }
+}
+
+@-webkit-keyframes popShake {
   0% {
     -webkit-transform: scale(1.1) rotate(0deg);
             transform: scale(1.1) rotate(0deg);
@@ -338,7 +586,9 @@ main .hero-section .about-section .illustration .coder-img {
     -webkit-transform: scale(1.1) rotate(0deg);
             transform: scale(1.1) rotate(0deg);
   }
-}@keyframes popShake {
+}
+
+@keyframes popShake {
   0% {
     -webkit-transform: scale(1.1) rotate(0deg);
             transform: scale(1.1) rotate(0deg);

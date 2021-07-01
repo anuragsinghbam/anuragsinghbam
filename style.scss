@@ -8,6 +8,10 @@
   --light: #ffffff;
 }
 
+.lorem {
+  color: #000000;
+}
+
 body {
   color: var(--light);
   margin: 0;
@@ -24,35 +28,56 @@ a {
   text-decoration: none;
 }
 
-main {
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.main-seciton {
   background: var(--dark);
-  height: 100vh;
+  min-height: 100vh;
 
   .hero-section {
     width: 80%;
     margin: 0 auto;
     max-width: 1600px;
+    pointer-events: none;
 
     .navbar {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin: 0 auto;
-      // padding: 0 2em;
       max-width: 1170px;
+      transition: all 0.2s ease-in-out;
+      z-index: 30;
+      position: absolute;
+      width: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 0;
 
       .logo {
         font-family: 'Dancing Script', cursive;
         font-size: 1.5em;
         font-weight: 700;
+        pointer-events: all;
       }
 
       h2 {
         margin-top: 0.5em;
       }
 
+      &.hidden {
+        opacity: 0;
+        pointer-events: none;
+      }
+
       .nav-links {
         display: flex;
+        pointer-events: all;
 
         div {
           cursor: pointer;
@@ -89,7 +114,6 @@ main {
     }
 
     .hero-section-text {
-      // background: var(--lightDark);
       position: absolute;
       top: 50%;
       transform: translateY(-70%);
@@ -116,11 +140,15 @@ main {
 
         .about-me-btn {
           display: inline-block;
-          background-image: linear-gradient(#ef3837, #f06248);
+          // background-image: linear-gradient(#ef3837, #f06248);
+          background-image: linear-gradient(to right, #2694D4, #5A53E0);
+          background-color: #4595EB;
+          border-radius: 5px;
           padding: 0.6em 1.25em;
           font-weight: 800;
           position: relative;
           cursor: pointer;
+          pointer-events: all;
         }
 
         .about-me-btn:hover .right-arrow {
@@ -134,6 +162,21 @@ main {
           transition: right 0.2s ease-in-out;
         }
       }
+
+      .name-logo {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 650px;
+        transform: translate(-50%, -40%);
+        z-index: -2;
+        opacity: 0.4;
+        // animation: breathing 4s ease-in-out infinite;
+
+        img {
+          width: 100%;
+        }
+      }
     }
 
     .about-section {
@@ -143,11 +186,41 @@ main {
       background: var(--lightDark);
       border-radius: 10px;
       position: fixed;
-      // opacity: 0.9;
       top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      left: 25%;
+      pointer-events: none;
+      transform: translate(-50%, -45%) scale(0);
       display: flex;
+      overflow: hidden;
+      z-index: 10;
+      transition: all 0.2s ease-in-out;
+
+      .x-icon {
+        background: #666af6;
+        background: #27292d;
+        border-radius: 50%;
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        right: 15px;
+        top: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: transform 0.15s ease-in-out;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.75);
+
+        img {
+          vertical-align: middle;
+          width: 50%;
+        }
+      }
+
+      .x-icon:hover {
+        transform: rotate(90deg) scale(1.05);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      }
 
       .about-me {
         width: 100%;
@@ -158,23 +231,40 @@ main {
           width: 65%;
           margin: 0 auto;
 
-          .about-me-subtitle {
-            font-size: 0.8em;
+          .mern {
+            margin-bottom: 2.2em;
+            margin-top: 4em;
           }
 
           .top-skills-icons {
             display: flex;
             margin-top: 1.5em;
+            position: relative;
 
             h2 {
               margin-top: 0.5em;
             }
 
-            .tooltip {
-              background-color: #8CC84B;
-              color: var(--dark);
-              padding: 0.5em 1em;
-              border-radius: 50px;
+            .mongodb-icon .tooltip,
+            .mongodb-icon .tooltip::after {
+              background-color: #47a248;
+              color: #ffffff;
+            }
+
+            .express-icon .tooltip,
+            .express-icon .tooltip::after {
+              background-color: #ffffff;
+            }
+
+            .react-icon .tooltip,
+            .react-icon .tooltip::after {
+              background-color: #61dafb;
+            }
+
+            .node-icon .tooltip,
+            .node-icon .tooltip::after {
+              background-color: #8cc84b;
+              margin-left: -2px;
             }
           }
 
@@ -182,6 +272,36 @@ main {
             display: flex;
             flex-direction: column;
             align-items: center;
+
+            .tooltip {
+              background-color: #8cc84b;
+              color: var(--dark);
+              padding: 0.5em 1.25em;
+              font-weight: 600;
+              border-radius: 50px;
+              position: absolute;
+              margin-bottom: 2em;
+              top: -1.25em;
+              box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+              opacity: 0;
+              pointer-events: none;
+              transition: all 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            }
+
+            .tooltip::after {
+              content: '';
+              width: 12px;
+              height: 12px;
+              background: #8cc84b;
+              transform: rotate(45deg);
+              position: absolute;
+              bottom: -6px;
+            }
+          }
+
+          .top-skills-icons div:hover .tooltip {
+            opacity: 1;
+            top: -3.25em;
           }
 
           .top-skills-icons div + div {
@@ -200,10 +320,90 @@ main {
         }
       }
     }
+
+    .about-section.active {
+      transform: translate(-50%, -50%) scale(1);
+      left: 50%;
+      pointer-events: all;
+    }
   }
+
+  .social-links {
+    position: absolute;
+    font-size: 2em;
+    right: 1em;
+    top: 44%;
+    transform: translateY(-50%);
+    pointer-events: all;
+
+    li + li {
+      margin-top: 0.5em;
+    }
+
+    i {
+      color: #B0B2C3;
+      transition: all 0.1s ease-in-out;
+    }
+
+    li:hover i {
+      color: #fff;
+      transform: scale(1.1);
+    }
+
+    .facebook-icon {
+      margin-left: 4px;
+    }
+
+    &.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+  }
+
+  #wrapper-canvas {
+    z-index: 10;
+    pointer-events: scroll;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--dark);
+    opacity: 0;
+    z-index: 9;
+    pointer-events: none;
+
+    &.active {
+      opacity: 0.7;
+      pointer-events: all;
+    }
+  }
+  
+  
 }
 
+
+
 @keyframes breathing {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-1em);
+  }
+  50% {
+    transform: translateY(0em);
+  }
+  75% {
+    transform: translateY(1em);
+  }
+  100% {
+    transform: translateY(0em);
+  }
 }
 
 @keyframes popShake {
