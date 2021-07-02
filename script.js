@@ -4,7 +4,7 @@ const xIcon = document.querySelector('.x-icon')
 const navbar = document.querySelector('.navbar')
 const socialIcons = document.querySelector('.social-links')
 const overlay = document.querySelector('.overlay')
-
+const bodyContainer = document.querySelector('#body-container')
 
 aboutMeBtn.addEventListener('click', () => {
   aboutSection.classList.add('active')
@@ -21,18 +21,13 @@ xIcon.addEventListener('click', () => {
   socialIcons.classList.remove('hidden')
 })
 
-
 overlay.addEventListener('click', () => {
-  aboutSection.classList.remove('active');
+  aboutSection.classList.remove('active')
   overlay.classList.remove('active')
   navbar.classList.remove('hidden')
   socialIcons.classList.remove('hidden')
 })
 
-// document.addEventListener('scroll', () => {
-//   window.scroll({
-//     top: 100,
-//     left: 100,
-//     behavior: 'smooth'
-//   })
-// })  
+canvas.addEventListener('wheel', (e) => {
+  window.scrollBy({ top: e.deltaY * 3, behavior: 'smooth' })
+})

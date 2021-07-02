@@ -8,6 +8,10 @@
   --light: #ffffff;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .lorem {
   color: #000000;
 }
@@ -36,6 +40,10 @@ li {
   list-style: none;
 }
 
+canvas {
+  touch-action: auto;
+}
+
 .main-seciton {
   background: var(--dark);
   min-height: 100vh;
@@ -54,7 +62,7 @@ li {
       transition: all 0.2s ease-in-out;
       z-index: 30;
       position: absolute;
-      width: 100%;
+      width: 90%;
       left: 50%;
       transform: translateX(-50%);
       top: 0;
@@ -132,6 +140,18 @@ li {
           margin: 0;
         }
 
+        @media (max-width: 1000px) {
+          h1 {
+            font-size: 3em;
+          }
+        }
+
+        @media (max-width: 650px) {
+          h1 {
+            font-size: 2em;
+          }
+        }
+
         p {
           font-family: 'Merriweather', serif;
           font-style: italic;
@@ -141,8 +161,8 @@ li {
         .about-me-btn {
           display: inline-block;
           // background-image: linear-gradient(#ef3837, #f06248);
-          background-image: linear-gradient(to right, #2694D4, #5A53E0);
-          background-color: #4595EB;
+          background-image: linear-gradient(to right, #2694d4, #5a53e0);
+          background-color: #4595eb;
           border-radius: 5px;
           padding: 0.6em 1.25em;
           font-weight: 800;
@@ -171,12 +191,32 @@ li {
         transform: translate(-50%, -40%);
         z-index: -2;
         opacity: 0.4;
-        // animation: breathing 4s ease-in-out infinite;
 
         img {
           width: 100%;
         }
       }
+
+
+      @media (max-width: 1500px) {
+        .name-logo {
+          width: 500px;
+        }
+      }
+
+      @media (max-width: 650px) {
+        .name-logo {
+          width: 350px;
+        }
+      }
+
+      @media (max-width: 460px) {
+        .name-logo {
+          width: 250px;
+        }
+      }
+
+
     }
 
     .about-section {
@@ -314,10 +354,30 @@ li {
         width: 100%;
         display: flex;
         align-items: center;
+        text-align: center;
 
         .coder-img {
           width: 100%;
         }
+
+        @media (max-width: 1000px) {
+          .coder-img {
+            width: 60%;
+            min-width: 270px;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 1000px) {
+      .about-section {
+        flex-direction: column;
+        min-height: 80%;
+        padding: 2em 0;
+      }
+
+      .about-me-text {
+        width: 90% !important;
       }
     }
 
@@ -341,7 +401,7 @@ li {
     }
 
     i {
-      color: #B0B2C3;
+      color: #b0b2c3;
       transition: all 0.1s ease-in-out;
     }
 
@@ -358,7 +418,12 @@ li {
       opacity: 0;
       pointer-events: none;
     }
+  }
 
+  @media (max-width: 650px) {
+    .social-links {
+      font-size: 1.25em;
+    }
   }
 
   #wrapper-canvas {
@@ -382,11 +447,7 @@ li {
       pointer-events: all;
     }
   }
-  
-  
 }
-
-
 
 @keyframes breathing {
   0% {
