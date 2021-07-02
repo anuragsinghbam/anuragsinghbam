@@ -149,6 +149,7 @@ canvas {
           transform: translateY(-70%);
   width: 100%;
   left: 0;
+  z-index: 20;
 }
 
 .main-seciton .hero-section .hero-section-text .hero-content {
@@ -207,6 +208,12 @@ canvas {
   transition: right 0.2s ease-in-out;
 }
 
+@media (max-width: 650px) {
+  .main-seciton .hero-section .hero-section-text .hero-content {
+    margin-top: 1.2em;
+  }
+}
+
 .main-seciton .hero-section .hero-section-text .name-logo {
   position: absolute;
   top: 0;
@@ -236,7 +243,22 @@ canvas {
 
 @media (max-width: 460px) {
   .main-seciton .hero-section .hero-section-text .name-logo {
-    width: 250px;
+    width: 300px;
+    -webkit-transform: translate(-50%, -10%);
+            transform: translate(-50%, -10%);
+  }
+}
+
+@media (max-width: 360px) {
+  .main-seciton .hero-section .hero-section-text .name-logo {
+    width: 200px;
+  }
+}
+
+@media (max-width: 650px) {
+  .main-seciton .hero-section .hero-section-text {
+    -webkit-transform: translateY(-60%);
+            transform: translateY(-60%);
   }
 }
 
@@ -256,7 +278,7 @@ canvas {
   display: -ms-flexbox;
   display: flex;
   overflow: hidden;
-  z-index: 10;
+  z-index: 40;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
@@ -315,9 +337,14 @@ canvas {
   margin: 0 auto;
 }
 
+.main-seciton .hero-section .about-section .about-me .about-me-text .about-me-title {
+  color: #2694d4;
+}
+
 .main-seciton .hero-section .about-section .about-me .about-me-text .mern {
   margin-bottom: 2.2em;
-  margin-top: 4em;
+  margin-top: 2.5em;
+  color: #2694d4;
 }
 
 .main-seciton .hero-section .about-section .about-me .about-me-text .top-skills-icons {
@@ -354,6 +381,47 @@ canvas {
   margin-left: -2px;
 }
 
+@media (max-width: 1000px) {
+  .main-seciton .hero-section .about-section .about-me .about-me-text .top-skills-icons {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .main-seciton .hero-section .about-section .about-me .about-me-text .about-me-title, .main-seciton .hero-section .about-section .about-me .about-me-text .mern {
+    text-align: center;
+  }
+  .main-seciton .hero-section .about-section .about-me .about-me-text .about-me-detail {
+    width: 90%;
+    margin: 0 auto;
+    text-align: justify;
+  }
+}
+
+@media (max-width: 400px) {
+  .main-seciton .hero-section .about-section .about-me .about-me-text .top-skills-icons {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 0.7em;
+  }
+  .main-seciton .hero-section .about-section .about-me .about-me-text .top-skills-icons svg {
+    width: 35px;
+    height: 35px;
+  }
+  .main-seciton .hero-section .about-section .about-me .about-me-text .about-me-title, .main-seciton .hero-section .about-section .about-me .about-me-text .mern {
+    text-align: center;
+  }
+  .main-seciton .hero-section .about-section .about-me .about-me-text .mern {
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+  }
+  .main-seciton .hero-section .about-section .about-me .about-me-text .about-me-detail {
+    width: 90%;
+    margin: 0 auto;
+    text-align: justify;
+  }
+}
+
 .main-seciton .hero-section .about-section .about-me .about-me-text .top-skills-icons div {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -365,6 +433,7 @@ canvas {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: context-menu;
 }
 
 .main-seciton .hero-section .about-section .about-me .about-me-text .top-skills-icons div .tooltip {
@@ -404,6 +473,18 @@ canvas {
   margin-left: 2em;
 }
 
+@media (max-width: 370px) {
+  .main-seciton .hero-section .about-section .about-me {
+    zoom: 90%;
+  }
+}
+
+@media (max-width: 330px) {
+  .main-seciton .hero-section .about-section .about-me {
+    zoom: 85%;
+  }
+}
+
 .main-seciton .hero-section .about-section .illustration {
   width: 100%;
   display: -webkit-box;
@@ -426,17 +507,32 @@ canvas {
   }
 }
 
+@media (max-width: 760px) {
+  .main-seciton .hero-section .about-section .illustration {
+    display: none;
+  }
+}
+
 @media (max-width: 1000px) {
   .main-seciton .hero-section .about-section {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    min-height: 80%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 80vh;
     padding: 2em 0;
   }
   .main-seciton .hero-section .about-me-text {
     width: 90% !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .main-seciton .hero-section .about-section {
+    padding: 1em 0 0;
   }
 }
 
@@ -455,6 +551,7 @@ canvas {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   pointer-events: all;
+  z-index: 22;
 }
 
 .main-seciton .social-links li + li {
@@ -486,6 +583,9 @@ canvas {
   .main-seciton .social-links {
     font-size: 1.25em;
   }
+  .main-seciton .social-links i {
+    color: #c3c5d4;
+  }
 }
 
 .main-seciton #wrapper-canvas {
@@ -508,6 +608,24 @@ canvas {
 .main-seciton .overlay.active {
   opacity: 0.7;
   pointer-events: all;
+}
+
+.main-seciton .overlay2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--dark);
+  opacity: 0.1;
+  z-index: 0;
+  pointer-events: none;
+}
+
+@media (max-width: 650px) {
+  .main-seciton .overlay2 {
+    opacity: 0.4;
+  }
 }
 
 @-webkit-keyframes breathing {

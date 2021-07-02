@@ -127,6 +127,7 @@ canvas {
       transform: translateY(-70%);
       width: 100%;
       left: 0;
+      z-index: 20;
 
       .hero-content {
         width: 80%;
@@ -175,11 +176,18 @@ canvas {
           right: -25%;
         }
 
+
         .right-arrow {
           position: absolute;
           top: 10%;
           right: -20%;
           transition: right 0.2s ease-in-out;
+        }
+      }
+
+      @media (max-width: 650px) {
+        .hero-content {
+          margin-top: 1.2em;
         }
       }
 
@@ -212,11 +220,24 @@ canvas {
 
       @media (max-width: 460px) {
         .name-logo {
-          width: 250px;
+          width: 300px;
+          transform: translate(-50%, -10%);
+        }
+      }
+
+      @media (max-width: 360px) {
+        .name-logo {
+          width: 200px;
         }
       }
 
 
+    }
+
+    @media (max-width: 650px) {
+      .hero-section-text {
+        transform: translateY(-60%);
+      }
     }
 
     .about-section {
@@ -232,7 +253,7 @@ canvas {
       transform: translate(-50%, -45%) scale(0);
       display: flex;
       overflow: hidden;
-      z-index: 10;
+      z-index: 40;
       transition: all 0.2s ease-in-out;
 
       .x-icon {
@@ -271,15 +292,23 @@ canvas {
           width: 65%;
           margin: 0 auto;
 
+          .about-me-title {
+            color: #2694d4;
+            // color: #666AF6;
+          }
+        
           .mern {
             margin-bottom: 2.2em;
-            margin-top: 4em;
+            margin-top: 2.5em;
+            color: #2694d4;
+            // color: #666AF6;
           }
 
           .top-skills-icons {
             display: flex;
             margin-top: 1.5em;
             position: relative;
+            
 
             h2 {
               margin-top: 0.5em;
@@ -308,10 +337,55 @@ canvas {
             }
           }
 
+          @media (max-width: 1000px) {
+            .top-skills-icons {
+              justify-content: center;
+            }
+
+            .about-me-title, .mern {
+              text-align: center;
+            }
+
+            .about-me-detail {
+              width: 90%;
+              margin: 0 auto;
+              text-align: justify;
+            }
+          }
+
+          @media (max-width: 400px) {
+            .top-skills-icons {
+              justify-content: center;
+              font-size: 0.7em;
+
+              svg {
+                width: 35px;
+                height: 35px;
+              }
+            }
+
+            .about-me-title, .mern {
+              text-align: center;
+              
+            }
+
+            .mern {
+              margin-top: 1em;
+              margin-bottom: 1.5em;
+            }
+
+            .about-me-detail {
+              width: 90%;
+              margin: 0 auto;
+              text-align: justify;
+            }
+          }
+
           .top-skills-icons div {
             display: flex;
             flex-direction: column;
             align-items: center;
+            cursor: context-menu; 
 
             .tooltip {
               background-color: #8cc84b;
@@ -350,6 +424,19 @@ canvas {
         }
       }
 
+      @media (max-width: 370px) {
+        .about-me {
+          zoom: 90%;
+        }
+      }
+
+      @media (max-width: 330px) {
+        .about-me {
+          zoom: 85%;
+        }
+      }
+    
+
       .illustration {
         width: 100%;
         display: flex;
@@ -367,19 +454,35 @@ canvas {
           }
         }
       }
+
+      @media (max-width: 760px) {
+        .illustration {
+          display: none;
+        }
+      }
     }
 
     @media (max-width: 1000px) {
       .about-section {
         flex-direction: column;
-        min-height: 80%;
+        justify-content: center;
+        height: 80vh;
         padding: 2em 0;
       }
 
       .about-me-text {
         width: 90% !important;
       }
+
+      
     }
+
+    @media (max-width: 400px) {
+      .about-section {
+        padding: 1em 0 0;
+      }
+    }
+  
 
     .about-section.active {
       transform: translate(-50%, -50%) scale(1);
@@ -388,6 +491,7 @@ canvas {
     }
   }
 
+  
   .social-links {
     position: absolute;
     font-size: 2em;
@@ -395,6 +499,7 @@ canvas {
     top: 44%;
     transform: translateY(-50%);
     pointer-events: all;
+    z-index: 22;
 
     li + li {
       margin-top: 0.5em;
@@ -423,6 +528,10 @@ canvas {
   @media (max-width: 650px) {
     .social-links {
       font-size: 1.25em;
+
+      i {
+        color: #c3c5d4;
+      }
     }
   }
 
@@ -445,6 +554,24 @@ canvas {
     &.active {
       opacity: 0.7;
       pointer-events: all;
+    }
+  }
+
+  .overlay2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--dark);
+    opacity: 0.1;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  @media (max-width: 650px) {
+    .overlay2 {
+      opacity: 0.4;
     }
   }
 }
