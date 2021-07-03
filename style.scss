@@ -571,11 +571,17 @@ canvas {
     border-radius: 5px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
     bottom: 5em;
+    display: inline-block;
     cursor: pointer;
     pointer-events: all;
     left: 50%;
     transform: translate(-50%, 0);
+    transition: all 0.1s ease-in-out;
     z-index: 10;
+
+    &:hover {
+      transform: translate(-50%, 0) scale(1.1);
+    }
 
     &:hover + {
       .down-arrow {
@@ -592,7 +598,7 @@ canvas {
     pointer-events: all;
     left: 50%;
     transform: translate(-60%, 0)  rotate(90deg);
-    transition: all 0.2s ease-in-out;
+    transition: all 0.25s ease-in-out;
 
     &:hover {
       bottom: 1.75em;
@@ -669,26 +675,28 @@ canvas {
         align-items: center;
         justify-content: center;
         position: relative;
-      }
 
-      img {
-        width: 100%;
-        max-width: 400px;
-        // min-width: 280px;
-        transition: all 0.2s ease-in-out;
-        z-index: 5;
-      }
 
-      &:hover {
         img {
-          transform: scale(1.2);
+          width: 100%;
+          max-width: 400px;
+          transition: all 0.2s ease-in-out;
+          z-index: 5;
         }
-
-        .visit-site {
-          top: -4em;
-          opacity: 1;
+  
+        &:hover {
+          img {
+            transform: scale(1.2);
+          }
+  
+          .visit-site {
+            top: -4em;
+            opacity: 1;
+          }
         }
       }
+
+      
     }
 
     .circle-dot {
@@ -715,7 +723,6 @@ canvas {
       width: 35%;
       height: 1px;
       background-color: #ddd;
-      // box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
       position: absolute;
       top: 50%;
       left: 50%;
@@ -764,22 +771,29 @@ canvas {
     border-radius: 10px;
 
     .circle-dot {
-      border-color: #f8d32e;
+      border-color: #639;
+    }
+
+    h3 {
+      color: #639;
     }
 
     .visit-site {
-      background-color: #f8d32e;
-      color: #444;
+      background-color: #639;
     }
 
     .circle-extension {
       transform: translate(0%, -50%);
-      background-color: #f8d32e;
+      background-color: #639;
     }
   }
   .project2 {
     .circle-dot {
       border-color: #47afa1;
+    }
+
+    h3 {
+      color: #47afa1;
     }
 
     .visit-site {
@@ -795,6 +809,10 @@ canvas {
       border-color: #2694d4;
     }
 
+    h3 {
+      color: #2694d4;
+    }
+
     .circle-extension {
       transform: translate(0%, -50%);
       background-color: #2694d4;
@@ -805,12 +823,68 @@ canvas {
       border-color: #fc815c;
     }
 
+    h3 {
+      color: #fc815c;
+    }
+
     .visit-site {
       background-color: #fc815c;
     }
 
     .circle-extension {
       background-color: #fc815c;
+    }
+  }
+  .project5 {
+    .circle-dot {
+      border-color: #156CDD;
+    }
+
+    h3 {
+      color: #156CDD;
+    }
+
+    .visit-site {
+      background-color: #156CDD;
+    }
+
+    .circle-extension {
+      transform: translate(0%, -50%);
+      background-color: #156CDD;
+    }
+
+    .project-img-wrapper {
+      &:hover {
+        img {
+          transform: scale(1.1) !important;
+        }
+      }
+    }
+  }
+
+  .project6 {
+    .circle-dot {
+      border-color: #FF5553;
+    }
+
+    h3 {
+      color: #FF5553;
+    }
+
+    .visit-site {
+      background-color: #FF5553;
+    }
+
+    .circle-extension {
+      background-color: #FF5553;
+    }
+
+    .project-img-wrapper {
+      &:hover {
+        img {
+          transform: scale(1.1) !important;
+        }
+      }
     }
   }
 
