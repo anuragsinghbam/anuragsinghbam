@@ -32,17 +32,17 @@ overlay.addEventListener('click', () => {
 })
 
 canvas.addEventListener('wheel', (e) => {
-  window.scrollBy({ top: e.deltaY * 3, behavior: 'smooth' })
+  window.scrollTo(0, ((window.innerHeight * e.deltaY / Math.abs(e.deltaY))) + 5)
 })
 
 latestWorks.addEventListener('click', (e) => {
-  scrollBy(0, window.innerHeight + 5)
+  scrollTo(0, window.innerHeight + 5)
 })
 
 downArrow.addEventListener('click', (e) => {
-  scrollBy(0, window.innerHeight + 5)
+  scrollTo(0, window.innerHeight + 5)
 })
 
 latestWorksArrow.addEventListener('click', (e) => {
-  scrollBy(0, window.innerHeight + 5)
+  scrollTo(0, window.innerHeight + 5)
 })

@@ -185,8 +185,8 @@ canvas {
 
 .main-seciton .hero-section .hero-section-text .hero-content .about-me-btn {
   display: inline-block;
-  background-image: -webkit-gradient(linear, left top, right top, from(#2694d4), to(#5a53e0));
-  background-image: linear-gradient(to right, #2694d4, #5a53e0);
+  background: -webkit-gradient(linear, right top, left top, from(#1595b6), to(rgba(31, 38, 103, 0.9)));
+  background: linear-gradient(to left, #1595b6, rgba(31, 38, 103, 0.9));
   background-color: #4595eb;
   border-radius: 5px;
   padding: 0.6em 1.25em;
@@ -194,6 +194,13 @@ canvas {
   position: relative;
   cursor: pointer;
   pointer-events: all;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+.main-seciton .hero-section .hero-section-text .hero-content .about-me-btn:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .main-seciton .hero-section .hero-section-text .hero-content .about-me-btn:hover .right-arrow {
@@ -278,7 +285,7 @@ canvas {
   display: -ms-flexbox;
   display: flex;
   overflow: hidden;
-  z-index: 40;
+  z-index: 100;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
@@ -602,7 +609,7 @@ canvas {
   bottom: 0;
   background: var(--dark);
   opacity: 0;
-  z-index: 9;
+  z-index: 99;
   pointer-events: none;
 }
 
@@ -631,12 +638,15 @@ canvas {
 
 .main-seciton .latest-works-link {
   position: absolute;
-  background: #191919;
+  background: -webkit-gradient(linear, right top, left top, from(#1595b6), to(rgba(31, 38, 103, 0.9)));
+  background: linear-gradient(to left, #1595b6, rgba(31, 38, 103, 0.9));
+  font-weight: 700;
   padding: 0.5em 1em;
+  font-size: 1.2em;
   border-radius: 5px;
-  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
-          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
-  bottom: 5em;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  bottom: 4em;
   display: inline-block;
   cursor: pointer;
   pointer-events: all;
@@ -717,13 +727,45 @@ canvas {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 4em;
+  gap: 5em;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   margin: 0 auto;
   position: relative;
-  margin-bottom: 2.5em;
+  margin-bottom: 3em;
+}
+
+.work-section .project .ejs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.2em;
+  cursor: default;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.work-section .project ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  font-size: 0.85em;
+}
+
+.work-section .project ul li {
+  border: 1px solid #ddd;
+  padding: 0.4em 0.8em;
+  border-radius: 50px;
+  margin-bottom: 0.5em;
+  margin-right: 0.5em;
 }
 
 .work-section .project .project-img {
@@ -768,7 +810,7 @@ canvas {
   max-width: 400px;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-  z-index: 5;
+  z-index: 6;
 }
 
 .work-section .project .project-img .project-img-wrapper:hover img {
@@ -781,13 +823,21 @@ canvas {
   opacity: 1;
 }
 
+.work-section .project .project-details a {
+  color: black;
+}
+
+.work-section .project .project-details span {
+  font-size: 1.2em;
+}
+
+.work-section .project .project-details p {
+  text-align: justify;
+}
+
 .work-section .project .circle-dot {
-  width: 15px;
-  height: 15px;
-  background-color: #fff;
-  border: 3px solid #2694d4;
-  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
-          box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+  width: 24px;
+  height: 24px;
   position: absolute;
   border-radius: 50%;
   top: 50%;
@@ -824,17 +874,26 @@ canvas {
   border-radius: 5px;
   -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
           box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   position: absolute;
-  opacity: 0;
+  opacity: 0.7;
   pointer-events: none;
-  z-index: 3;
+  z-index: 5;
   top: 10%;
   left: 50%;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
+}
+
+.work-section .project .visit-site svg {
+  margin-left: 0.25em;
 }
 
 .work-section .project .visit-site::after {
@@ -851,6 +910,7 @@ canvas {
 
 .work-section .project h3 {
   font-size: 2em;
+  margin-bottom: 0.2em;
 }
 
 .work-section .project div {
@@ -866,6 +926,10 @@ canvas {
 }
 
 .work-section .project1 h3 {
+  color: #639;
+}
+
+.work-section .project1 h3 + span {
   color: #639;
 }
 
@@ -887,6 +951,10 @@ canvas {
   color: #47afa1;
 }
 
+.work-section .project2 h3 + span {
+  color: #47afa1;
+}
+
 .work-section .project2 .visit-site {
   background-color: #47afa1;
 }
@@ -900,6 +968,10 @@ canvas {
 }
 
 .work-section .project3 h3 {
+  color: #2694d4;
+}
+
+.work-section .project3 h3 + span {
   color: #2694d4;
 }
 
@@ -917,6 +989,10 @@ canvas {
   color: #fc815c;
 }
 
+.work-section .project4 h3 + span {
+  color: #fc815c;
+}
+
 .work-section .project4 .visit-site {
   background-color: #fc815c;
 }
@@ -926,21 +1002,25 @@ canvas {
 }
 
 .work-section .project5 .circle-dot {
-  border-color: #156CDD;
+  border-color: #156cdd;
 }
 
 .work-section .project5 h3 {
-  color: #156CDD;
+  color: #156cdd;
+}
+
+.work-section .project5 h3 + span {
+  color: #156cdd;
 }
 
 .work-section .project5 .visit-site {
-  background-color: #156CDD;
+  background-color: #156cdd;
 }
 
 .work-section .project5 .circle-extension {
   -webkit-transform: translate(0%, -50%);
           transform: translate(0%, -50%);
-  background-color: #156CDD;
+  background-color: #156cdd;
 }
 
 .work-section .project5 .project-img-wrapper:hover img {
@@ -949,19 +1029,23 @@ canvas {
 }
 
 .work-section .project6 .circle-dot {
-  border-color: #FF5553;
+  border-color: #ff5553;
 }
 
 .work-section .project6 h3 {
-  color: #FF5553;
+  color: #ff5553;
+}
+
+.work-section .project6 h3 + span {
+  color: #ff5553;
 }
 
 .work-section .project6 .visit-site {
-  background-color: #FF5553;
+  background-color: #ff5553;
 }
 
 .work-section .project6 .circle-extension {
-  background-color: #FF5553;
+  background-color: #ff5553;
 }
 
 .work-section .project6 .project-img-wrapper:hover img {

@@ -163,7 +163,8 @@ canvas {
         .about-me-btn {
           display: inline-block;
           // background-image: linear-gradient(#ef3837, #f06248);
-          background-image: linear-gradient(to right, #2694d4, #5a53e0);
+          // background-image: linear-gradient(to right, #2694d4, #5a53e0);
+          background: linear-gradient(to left, #1595b6, rgba(31,38,103,0.9));
           background-color: #4595eb;
           border-radius: 5px;
           padding: 0.6em 1.25em;
@@ -171,10 +172,15 @@ canvas {
           position: relative;
           cursor: pointer;
           pointer-events: all;
-        }
+          transition: all 0.1s ease-in-out;
 
-        .about-me-btn:hover .right-arrow {
-          right: -25%;
+          &:hover {
+
+            transform: scale(1.1);
+            .right-arrow {
+              right: -25%;
+            }
+          }
         }
 
         .right-arrow {
@@ -250,7 +256,7 @@ canvas {
       transform: translate(-50%, -45%) scale(0);
       display: flex;
       overflow: hidden;
-      z-index: 40;
+      z-index: 100;
       transition: all 0.2s ease-in-out;
 
       .x-icon {
@@ -537,7 +543,7 @@ canvas {
     bottom: 0;
     background: var(--dark);
     opacity: 0;
-    z-index: 9;
+    z-index: 99;
     pointer-events: none;
 
     &.active {
@@ -566,11 +572,13 @@ canvas {
 
   .latest-works-link {
     position: absolute;
-    background: #191919;
+    background: linear-gradient(to left, #1595b6, rgba(31,38,103,0.9));
+    font-weight: 700;
     padding: 0.5em 1em;
+    font-size: 1.2em;
     border-radius: 5px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
-    bottom: 5em;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    bottom: 4em;
     display: inline-block;
     cursor: pointer;
     pointer-events: all;
@@ -585,10 +593,9 @@ canvas {
 
     &:hover + {
       .down-arrow {
-        bottom: 1.75em; 
+        bottom: 1.75em;
       }
     }
-    
   }
 
   .down-arrow {
@@ -597,7 +604,7 @@ canvas {
     cursor: pointer;
     pointer-events: all;
     left: 50%;
-    transform: translate(-60%, 0)  rotate(90deg);
+    transform: translate(-60%, 0) rotate(90deg);
     transition: all 0.25s ease-in-out;
 
     &:hover {
@@ -646,14 +653,33 @@ canvas {
 
   .project {
     display: flex;
-    gap: 4em;
+    gap: 5em;
     align-items: center;
     margin: 0 auto;
     position: relative;
-    margin-bottom: 2.5em;
-    // padding: 1em 2em;
-    // box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-    // border-radius: 10px;
+    margin-bottom: 3em;
+
+    .ejs {
+      display: flex;
+      align-items: center;
+      font-size: 1.2em;
+      cursor: default;
+      user-select: none;
+    }
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      font-size: 0.85em;
+      li {
+        border: 1px solid #ddd;
+        padding: 0.4em 0.8em;
+        border-radius: 50px;
+        margin-bottom: 0.5em;
+        margin-right: 0.5em;
+      }
+    }
+    
 
     .project-img {
       position: relative;
@@ -676,35 +702,47 @@ canvas {
         justify-content: center;
         position: relative;
 
-
         img {
           width: 100%;
           max-width: 400px;
           transition: all 0.2s ease-in-out;
-          z-index: 5;
+          z-index: 6;
         }
-  
+
         &:hover {
           img {
             transform: scale(1.2);
           }
-  
+
           .visit-site {
             top: -4em;
             opacity: 1;
           }
         }
       }
+    }
 
-      
+    .project-details {
+      a {
+        color: black;
+      }
+
+      span {
+        font-size: 1.2em;
+      }
+
+      p {
+        text-align: justify;
+      }
+
     }
 
     .circle-dot {
-      width: 15px;
-      height: 15px;
-      background-color: #fff;
-      border: 3px solid #2694d4;
-      box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+      width: 24px;
+      height: 24px;
+      // background-color: #fff;
+      // border: 3px solid #2694d4;
+      // box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
       position: absolute;
       border-radius: 50%;
       top: 50%;
@@ -736,15 +774,20 @@ canvas {
       padding: 0.5em 1em;
       border-radius: 5px;
       box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-      display: inline-block;
+      display: flex;
+      align-items: center;
       transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
       position: absolute;
-      opacity: 0;
+      opacity: 0.7;
       pointer-events: none;
-      z-index: 3;
+      z-index: 5;
       top: 10%;
       left: 50%;
       transform: translate(-50%, 0);
+
+      svg {
+        margin-left: 0.25em;
+      }
 
       &::after {
         content: '';
@@ -760,6 +803,7 @@ canvas {
 
     h3 {
       font-size: 2em;
+      margin-bottom: 0.2em;
     }
 
     div {
@@ -776,7 +820,12 @@ canvas {
 
     h3 {
       color: #639;
+
+      + span {
+        color: #639;
+      }
     }
+    
 
     .visit-site {
       background-color: #639;
@@ -794,6 +843,10 @@ canvas {
 
     h3 {
       color: #47afa1;
+
+      + span {
+        color: #47afa1;
+      }
     }
 
     .visit-site {
@@ -811,6 +864,10 @@ canvas {
 
     h3 {
       color: #2694d4;
+
+      + span {
+        color: #2694d4;
+      }
     }
 
     .circle-extension {
@@ -825,6 +882,10 @@ canvas {
 
     h3 {
       color: #fc815c;
+
+      + span {
+        color: #fc815c;
+      }
     }
 
     .visit-site {
@@ -837,20 +898,24 @@ canvas {
   }
   .project5 {
     .circle-dot {
-      border-color: #156CDD;
+      border-color: #156cdd;
     }
 
     h3 {
-      color: #156CDD;
+      color: #156cdd;
+
+      + span {
+        color: #156cdd;
+      }
     }
 
     .visit-site {
-      background-color: #156CDD;
+      background-color: #156cdd;
     }
 
     .circle-extension {
       transform: translate(0%, -50%);
-      background-color: #156CDD;
+      background-color: #156cdd;
     }
 
     .project-img-wrapper {
@@ -864,19 +929,23 @@ canvas {
 
   .project6 {
     .circle-dot {
-      border-color: #FF5553;
+      border-color: #ff5553;
     }
 
     h3 {
-      color: #FF5553;
+      color: #ff5553;
+
+      + span {
+        color: #ff5553;
+      }
     }
 
     .visit-site {
-      background-color: #FF5553;
+      background-color: #ff5553;
     }
 
     .circle-extension {
-      background-color: #FF5553;
+      background-color: #ff5553;
     }
 
     .project-img-wrapper {
