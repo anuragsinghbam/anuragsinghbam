@@ -32,7 +32,7 @@ overlay.addEventListener('click', () => {
 })
 
 canvas.addEventListener('wheel', (e) => {
-  window.scrollTo(0, ((window.innerHeight * e.deltaY / Math.abs(e.deltaY))) + 5)
+  window.scrollTo(0, (window.innerHeight * e.deltaY) / Math.abs(e.deltaY) + 5)
 })
 
 latestWorks.addEventListener('click', (e) => {
@@ -46,3 +46,15 @@ downArrow.addEventListener('click', (e) => {
 latestWorksArrow.addEventListener('click', (e) => {
   scrollTo(0, window.innerHeight + 5)
 })
+
+// new GitHubCalendar('.calendar', 'anuragsinghbam', {
+//   responsive: true,
+//   tooltips: true,
+// })
+
+var swiper = new Swiper(".mySwiper", {
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
