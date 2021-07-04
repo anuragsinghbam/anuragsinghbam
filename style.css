@@ -836,8 +836,10 @@ canvas {
 }
 
 .work-section .project .circle-dot {
-  width: 24px;
-  height: 24px;
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  border: 3px solid #2694d4;
   position: absolute;
   border-radius: 50%;
   top: 50%;
