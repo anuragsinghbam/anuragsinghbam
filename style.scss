@@ -544,6 +544,12 @@ canvas {
     pointer-events: scroll;
   }
 
+  @media (max-width: 650px) {
+    #wrapper-canvas {
+      display: none;
+    }
+  }
+
   .overlay {
     position: fixed;
     top: 0;
