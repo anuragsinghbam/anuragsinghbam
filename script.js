@@ -32,15 +32,15 @@ overlay.addEventListener('click', () => {
 })
 
 canvas.addEventListener('wheel', (e) => {
-  window.scrollTo(0, (window.outerHeight * e.deltaY) / Math.abs(e.deltaY) + 5)
+  window.scrollTo(0, (window.innerHeight * e.deltaY) / Math.abs(e.deltaY) + 5)
 })
 
 latestWorks.addEventListener('click', (e) => {
-  scrollTo(0, window.outerHeight + 5)
+  scrollTo(0, window.innerHeight + 5)
 })
 
 downArrow.addEventListener('click', (e) => {
-  scrollTo(0, window.outerHeight + 5)
+  scrollTo(0, window.innerHeight + 5)
 })
 
 latestWorksArrow.addEventListener('click', (e) => {
@@ -61,5 +61,20 @@ var swiper = new Swiper(".mySwiper", {
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
+    
   },
+
+  
+
+  effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: false,
+        },
 });

@@ -3,7 +3,7 @@
 :root {
   --dark: #111111;
   --lightDark: #191919;
-  --myDark: #27392d;
+  --myDark: #27292d;
   --light: #ffffff;
   --lightGrey: #ddd;
 }
@@ -86,6 +86,17 @@ canvas {
   font-size: 1.5em;
   font-weight: 700;
   pointer-events: all;
+  margin-top: 0.5em;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+.main-section .hero-section .navbar .logo:hover {
+  opacity: 0.8;
+}
+
+.main-section .hero-section .navbar .logo a {
+  display: block;
 }
 
 .main-section .hero-section .navbar h2 {
@@ -235,10 +246,9 @@ canvas {
   top: 0;
   left: 50%;
   width: 650px;
-  -webkit-transform: translate(-50%, -40%);
-          transform: translate(-50%, -40%);
+  -webkit-transform: translate(-50%, -28%);
+          transform: translate(-50%, -28%);
   z-index: -2;
-  opacity: 0.4;
 }
 
 .main-section .hero-section .hero-section-text .name-logo img {
@@ -736,13 +746,16 @@ canvas {
   width: max-content;
   margin: 0 auto;
   padding: 0.2em 0.5em;
-  border: 2px solid var(--lightGrey);
+  border: 2px solid #1788ae;
+  border: 2px solid #1788ae;
   border-top: none;
+  border-radius: 0 0 8px 8px;
   font-size: 2.5em;
   background: var(--light);
   position: relative;
   z-index: 5;
-  color: #333;
+  color: #1788ae;
+  color: #1788ae;
 }
 
 .work-section .project {
@@ -1155,7 +1168,8 @@ canvas {
   position: absolute;
   top: 0;
   bottom: -5em;
-  background: var(--lightGrey);
+  background: #1788ae;
+  opacity: 0.5;
   left: 50%;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
@@ -1196,12 +1210,13 @@ canvas {
   width: max-content;
   position: relative;
   background-color: var(--light);
-  border: 2px solid var(--lightGrey);
+  border: 2px solid #1788ae;
   margin: 0 auto;
   font-size: 2em;
   margin-bottom: 1.5em;
   padding: 0.35em 0.65em;
-  color: #333;
+  border-radius: 8px;
+  color: #1788ae;
   z-index: 5;
 }
 
@@ -1266,8 +1281,6 @@ canvas {
   max-width: 800px;
   z-index: 6;
   width: 80%;
-  cursor: -webkit-grab;
-  cursor: grab;
   position: relative;
   background-color: var(--light);
 }
@@ -1352,11 +1365,138 @@ canvas {
   }
 }
 
+.testimonial-section .swiper-container .swiper-button-next,
+.testimonial-section .swiper-container .swiper-button-prev {
+  color: #1788ae;
+}
+
+.testimonial-section .swiper-container .swiper-pagination-bullet {
+  background-color: #1788ae;
+}
+
 @media (max-width: 750px) {
   .testimonial-section .swiper-container .swiper-button-next,
   .testimonial-section .swiper-container .swiper-button-prev {
     display: none;
   }
+}
+
+.contact-section {
+  padding-top: 2em;
+}
+
+.contact-section h2 {
+  text-align: center;
+  font-size: 2em;
+  color: #1788ae;
+}
+
+.contact-section .contact-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 90%;
+  max-width: 1600px;
+  margin: 0 auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #444;
+}
+
+@media (max-width: 990px) {
+  .contact-section .contact-form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.contact-section .contact-form svg {
+  vertical-align: middle;
+}
+
+.contact-section .contact-form .contact-img {
+  width: 100%;
+  text-align: center;
+}
+
+.contact-section .contact-form .contact-img img {
+  width: 100%;
+  max-width: 500px;
+}
+
+.contact-section .contact-form form {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 700px;
+}
+
+.contact-section .contact-form form input,
+.contact-section .contact-form form textarea,
+.contact-section .contact-form form button {
+  border: none;
+  background-color: #1788ae18;
+  padding: 1em;
+  border-radius: 5px;
+  outline: none;
+  resize: none;
+  margin: 0.5em 0 1.2em;
+  border: 1px solid #ced4da;
+  -webkit-transition: all 0.025s ease-in-out;
+  transition: all 0.025s ease-in-out;
+}
+
+.contact-section .contact-form form input:focus,
+.contact-section .contact-form form textarea:focus,
+.contact-section .contact-form form button:focus {
+  border-color: #1788ae;
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(23, 136, 174, 0.25);
+          box-shadow: 0 0 0 0.2rem rgba(23, 136, 174, 0.25);
+}
+
+.contact-section .contact-form form button {
+  background-color: #1788ae;
+  font-family: inherit;
+  margin-top: 1em;
+  color: white;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
+}
+
+.contact-section .contact-form form button:hover {
+  -webkit-transform: scale(1.025);
+          transform: scale(1.025);
+}
+
+footer {
+  margin: 3em 0 2em;
+}
+
+footer p {
+  text-align: center;
+  color: #999;
+  font-size: 0.75em;
+}
+
+footer .black-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @-webkit-keyframes breathing {
