@@ -83,6 +83,7 @@ contactForm.addEventListener('submit', (e) => {
     })
 
     Array.from(contactForm.children).forEach((child, i) => {
+      console.log(child);
       if (i % 2) {
         child.value = ''
       }
