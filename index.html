@@ -688,29 +688,90 @@
       <h2>Let's connect</h2>
       <div class="contact-form">
         <div class="contact-img">
-          <img src="./images/contact-me.svg" alt="constact image" draggable="false" />
+          <img
+            src="./images/contact-me.svg"
+            alt="constact image"
+            draggable="false"
+          />
         </div>
 
-        <form action="">
+        <form method="POST" netlify>
           <label for="name">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg> Name</label>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-user"
+            >
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+            Name</label
+          >
           <input type="text" id="name" required />
           <label for="email">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-at-sign"><circle cx="12" cy="12" r="4"></circle><path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94"></path></svg> Email</label>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-at-sign"
+            >
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94"></path>
+            </svg>
+            Email</label
+          >
           <input type="email" id="email" required />
           <label for="message">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-square"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg> Message</label>
-          <textarea name="message" id="message" cols="25" rows="10" required></textarea>
-          <button type="submit"><i class="fas fa-paper-plane"></i> &nbsp; Send Message</button>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-message-square"
+            >
+              <path
+                d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+              ></path>
+            </svg>
+            Message</label
+          >
+          <textarea
+            name="message"
+            id="message"
+            cols="25"
+            rows="10"
+            required
+          ></textarea>
+          <button type="submit">
+            <i class="fas fa-paper-plane"></i> &nbsp; Send Message
+          </button>
         </form>
       </div>
     </section>
 
     <footer>
-
       <p>Anurag Singh &copy; 2021</p>
       <div class="black-logo">
         <img src="./images/name-logo-black.svg" alt="logo" />
+        <span>To Top</span>
       </div>
     </footer>
 

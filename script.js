@@ -8,6 +8,7 @@ const bodyContainer = document.querySelector('#body-container')
 const latestWorks = document.querySelector('.latest-works-link')
 const downArrow = document.querySelector('.down-arrow')
 const latestWorksArrow = document.querySelector('.latest-works-arrow')
+const blackLogo = document.querySelector('.black-logo')
 
 aboutMeBtn.addEventListener('click', () => {
   aboutSection.classList.add('active')
@@ -47,34 +48,37 @@ latestWorksArrow.addEventListener('click', (e) => {
   scrollTo(0, window.innerHeight + 5)
 })
 
+blackLogo.addEventListener('click', (e) => {
+  scrollTo(0, 0)
+})
+
+// window.scrollTo(0,document.body.scrollHeight);
+
 // new GitHubCalendar('.calendar', 'anuragsinghbam', {
 //   responsive: true,
 //   tooltips: true,
 // })
 
-var swiper = new Swiper(".mySwiper", {
+var swiper = new Swiper('.mySwiper', {
   loop: true,
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
   },
   pagination: {
-    el: ".swiper-pagination",
+    el: '.swiper-pagination',
     clickable: true,
-    
   },
 
-  
-
-  effect: "coverflow",
-        grabCursor: true,
-        centeredSlides: true,
-        slidesPerView: "auto",
-        coverflowEffect: {
-          rotate: 50,
-          stretch: 0,
-          depth: 100,
-          modifier: 1,
-          slideShadows: false,
-        },
-});
+  effect: 'coverflow',
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: 'auto',
+  coverflowEffect: {
+    rotate: 50,
+    stretch: 0,
+    depth: 100,
+    modifier: 1,
+    slideShadows: false,
+  },
+})

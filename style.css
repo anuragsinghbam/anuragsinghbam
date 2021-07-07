@@ -758,6 +758,16 @@ canvas {
   color: #1788ae;
 }
 
+@media (max-width: 650px) {
+  .work-section h2 {
+    font-size: 1.5em;
+    border: none;
+    padding: 0;
+    margin-bottom: 0.8em;
+    margin-top: 0.5em;
+  }
+}
+
 .work-section .project {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1389,6 +1399,25 @@ canvas {
   text-align: center;
   font-size: 2em;
   color: #1788ae;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 auto;
+  position: relative;
+  background-color: var(--light);
+  border: 2px solid #1788ae;
+  margin-bottom: 1.5em;
+  padding: 0.35em 0.65em;
+  border-radius: 8px;
+}
+
+@media (max-width: 650px) {
+  .contact-section h2 {
+    font-size: 1.5em;
+    border: none;
+    padding: 0;
+    margin-bottom: 0.8em;
+  }
 }
 
 .contact-section .contact-form {
@@ -1497,6 +1526,60 @@ footer .black-logo {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  cursor: pointer;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 auto;
+  position: relative;
+  z-index: 4;
+}
+
+footer .black-logo span {
+  background: #1788ae;
+  color: var(--light);
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  position: absolute;
+  opacity: 0;
+  z-index: -5;
+  left: 0%;
+  -webkit-transform: translate(0%, 15%);
+          transform: translate(0%, 15%);
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+footer .black-logo span svg {
+  margin-left: 0.25em;
+}
+
+footer .black-logo span::after {
+  content: '';
+  width: 12px;
+  height: 12px;
+  background: inherit;
+  -webkit-transform: rotate(45deg) translate(-50%, 0%);
+          transform: rotate(45deg) translate(-50%, 0%);
+  position: absolute;
+  left: 50%;
+  top: 0px;
+}
+
+footer .black-logo:hover span {
+  left: 110%;
+  opacity: 1;
 }
 
 @-webkit-keyframes breathing {
