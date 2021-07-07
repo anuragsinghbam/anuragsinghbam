@@ -67,7 +67,7 @@ contactForm.addEventListener('submit', (e) => {
     .then(() => {
       sendButton.classList.add('sent')
       sendButton.innerHTML = 'Message Sent'
-      
+      console.log('Message Sent Successfully')
     })
     .catch((error) => {
       sendButton.classList.add('notSent')
