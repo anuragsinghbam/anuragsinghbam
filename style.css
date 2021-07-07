@@ -70,8 +70,8 @@ canvas {
       -ms-flex-pack: justify;
           justify-content: space-between;
   max-width: 1170px;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
   z-index: 30;
   position: absolute;
   width: 90%;
@@ -87,8 +87,8 @@ canvas {
   font-weight: 700;
   pointer-events: all;
   margin-top: 0.5em;
-  -webkit-transition: all 0.1s ease-in-out;
-  transition: all 0.1s ease-in-out;
+  -webkit-transition: opacity 0.1s ease-in-out;
+  transition: opacity 0.1s ease-in-out;
 }
 
 .main-section .hero-section .navbar .logo:hover {
@@ -208,8 +208,10 @@ canvas {
   position: relative;
   cursor: pointer;
   pointer-events: all;
-  -webkit-transition: all 0.1s ease-in-out;
-  transition: all 0.1s ease-in-out;
+  -webkit-transition: -webkit-transform 0.1s ease-in-out;
+  transition: -webkit-transform 0.1s ease-in-out;
+  transition: transform 0.1s ease-in-out;
+  transition: transform 0.1s ease-in-out, -webkit-transform 0.1s ease-in-out;
 }
 
 .main-section .hero-section .hero-section-text .hero-content .about-me-btn:hover {
@@ -306,8 +308,10 @@ canvas {
   display: flex;
   overflow: hidden;
   z-index: 1000;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+  -webkit-transition: left 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  transition: left 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, left 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, left 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
 }
 
 .main-section .hero-section .about-section .x-icon {
@@ -474,8 +478,8 @@ canvas {
           box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
   opacity: 0;
   pointer-events: none;
-  -webkit-transition: all 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  transition: all 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transition: top 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55), opacity 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: top 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55), opacity 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 .main-section .hero-section .about-section .about-me .about-me-text .top-skills-icons div .tooltip::after {
@@ -588,8 +592,10 @@ canvas {
 
 .main-section .social-links i {
   color: #b0b2c3;
-  -webkit-transition: all 0.1s ease-in-out;
-  transition: all 0.1s ease-in-out;
+  -webkit-transition: color 0.1s ease-in-out, -webkit-transform 0.1s ease-in-out;
+  transition: color 0.1s ease-in-out, -webkit-transform 0.1s ease-in-out;
+  transition: color 0.1s ease-in-out, transform 0.1s ease-in-out;
+  transition: color 0.1s ease-in-out, transform 0.1s ease-in-out, -webkit-transform 0.1s ease-in-out;
 }
 
 .main-section .social-links li:hover i {
@@ -688,8 +694,10 @@ canvas {
   left: 50%;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
-  -webkit-transition: all 0.1s ease-in-out;
-  transition: all 0.1s ease-in-out;
+  -webkit-transition: -webkit-transform 0.1s ease-in-out;
+  transition: -webkit-transform 0.1s ease-in-out;
+  transition: transform 0.1s ease-in-out;
+  transition: transform 0.1s ease-in-out, -webkit-transform 0.1s ease-in-out;
   z-index: 10;
 }
 
@@ -710,8 +718,8 @@ canvas {
   left: 50%;
   -webkit-transform: translate(-60%, 0) rotate(90deg);
           transform: translate(-60%, 0) rotate(90deg);
-  -webkit-transition: all 0.25s ease-in-out;
-  transition: all 0.25s ease-in-out;
+  -webkit-transition: bottom 0.25s ease-in-out;
+  transition: bottom 0.25s ease-in-out;
 }
 
 .main-section .down-arrow:hover {
@@ -877,8 +885,10 @@ canvas {
 .work-section .project .project-img .project-img-wrapper img {
   width: 100%;
   max-width: 400px;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  transition: -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
   z-index: 6;
 }
 
@@ -904,7 +914,6 @@ canvas {
   }
   .work-section .project .project-img .project-img-wrapper:hover .visit-site {
     top: -4em;
-    opacity: 1;
   }
 }
 
@@ -950,8 +959,10 @@ canvas {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  -webkit-transition: all 0.05s ease-in-out;
-  transition: all 0.05s ease-in-out;
+  -webkit-transition: -webkit-transform 0.05s ease-in-out;
+  transition: -webkit-transform 0.05s ease-in-out;
+  transition: transform 0.05s ease-in-out;
+  transition: transform 0.05s ease-in-out, -webkit-transform 0.05s ease-in-out;
   cursor: pointer;
   z-index: 2;
 }
@@ -993,10 +1004,9 @@ canvas {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transition: top 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: top 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   position: absolute;
-  opacity: 0.7;
   z-index: 5;
   top: 10%;
   left: 50%;
@@ -1491,8 +1501,10 @@ canvas {
   resize: none;
   margin: 0.5em 0 1.2em;
   border: 1px solid #ced4da;
-  -webkit-transition: all 0.025s ease-in-out;
-  transition: all 0.025s ease-in-out;
+  -webkit-transition: border-color 0.05s ease-in-out, -webkit-box-shadow 0.05s ease-in-out;
+  transition: border-color 0.05s ease-in-out, -webkit-box-shadow 0.05s ease-in-out;
+  transition: border-color 0.05s ease-in-out, box-shadow 0.05s ease-in-out;
+  transition: border-color 0.05s ease-in-out, box-shadow 0.05s ease-in-out, -webkit-box-shadow 0.05s ease-in-out;
 }
 
 .contact-section .contact-form form input:focus,
@@ -1508,8 +1520,10 @@ canvas {
   font-family: inherit;
   margin-top: 1em;
   color: white;
-  -webkit-transition: all 0.25s ease-in-out;
-  transition: all 0.25s ease-in-out;
+  -webkit-transition: -webkit-transform 0.25s ease-in-out;
+  transition: -webkit-transform 0.25s ease-in-out;
+  transition: transform 0.25s ease-in-out;
+  transition: transform 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out;
   cursor: pointer;
 }
 
@@ -1519,7 +1533,7 @@ canvas {
 }
 
 .contact-section .contact-form form button.sent {
-  background-color: #47A248;
+  background-color: #47a248;
 }
 
 .contact-section .contact-form form button.notSent {
@@ -1565,8 +1579,8 @@ footer .black-logo span {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transition: left 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55), opacity 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: left 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55), opacity 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   position: absolute;
   opacity: 0;
   z-index: -5;
@@ -1597,6 +1611,40 @@ footer .black-logo span::after {
 footer .black-logo:hover span {
   left: 110%;
   opacity: 1;
+}
+
+footer .social-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 auto;
+  margin-top: 1em;
+  font-size: 1.25em;
+}
+
+footer .social-links li a {
+  color: #888888;
+  color: #1788ae;
+}
+
+@media (min-width: 650px) {
+  footer .social-links li a i {
+    -webkit-transition: -webkit-transform 0.2s ease-in-out;
+    transition: -webkit-transform 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  }
+  footer .social-links li a i:hover {
+    -webkit-transform: scale(1.15);
+            transform: scale(1.15);
+  }
+}
+
+footer .social-links li + li {
+  margin-left: 1.5em;
 }
 
 @-webkit-keyframes breathing {

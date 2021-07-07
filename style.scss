@@ -63,7 +63,7 @@ canvas {
       align-items: center;
       justify-content: space-between;
       max-width: 1170px;
-      transition: all 0.2s ease-in-out;
+      transition: opacity 0.2s ease-in-out;
       z-index: 30;
       position: absolute;
       width: 90%;
@@ -77,7 +77,7 @@ canvas {
         font-weight: 700;
         pointer-events: all;
         margin-top: 0.5em;
-        transition: all 0.1s ease-in-out;
+        transition: opacity 0.1s ease-in-out;
 
         &:hover {
           opacity: 0.8;
@@ -185,7 +185,7 @@ canvas {
           position: relative;
           cursor: pointer;
           pointer-events: all;
-          transition: all 0.1s ease-in-out;
+          transition: transform 0.1s ease-in-out;
 
           &:hover {
             transform: scale(1.1);
@@ -275,7 +275,7 @@ canvas {
       display: flex;
       overflow: hidden;
       z-index: 1000;
-      transition: all 0.2s ease-in-out;
+      transition: transform 0.2s ease-in-out, left 0.2s ease-in-out;
 
       .x-icon {
         background: #666af6;
@@ -416,7 +416,8 @@ canvas {
               box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
               opacity: 0;
               pointer-events: none;
-              transition: all 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+              transition: top 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55),
+                opacity 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55);
             }
 
             .tooltip::after {
@@ -520,7 +521,7 @@ canvas {
 
     i {
       color: #b0b2c3;
-      transition: all 0.1s ease-in-out;
+      transition: color 0.1s ease-in-out, transform 0.1s ease-in-out;
     }
 
     li:hover i {
@@ -616,7 +617,7 @@ canvas {
     pointer-events: all;
     left: 50%;
     transform: translate(-50%, 0);
-    transition: all 0.1s ease-in-out;
+    transition: transform 0.1s ease-in-out;
     z-index: 10;
 
     &:hover {
@@ -637,7 +638,7 @@ canvas {
     pointer-events: all;
     left: 50%;
     transform: translate(-60%, 0) rotate(90deg);
-    transition: all 0.25s ease-in-out;
+    transition: bottom 0.25s ease-in-out;
 
     &:hover {
       bottom: 1.75em;
@@ -767,7 +768,7 @@ canvas {
         img {
           width: 100%;
           max-width: 400px;
-          transition: all 0.2s ease-in-out;
+          transition: transform 0.2s ease-in-out;
           z-index: 6;
         }
 
@@ -794,7 +795,6 @@ canvas {
 
             .visit-site {
               top: -4em;
-              opacity: 1;
             }
           }
         }
@@ -844,7 +844,7 @@ canvas {
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      transition: all 0.05s ease-in-out;
+      transition: transform 0.05s ease-in-out;
       cursor: pointer;
       z-index: 2;
 
@@ -879,9 +879,8 @@ canvas {
       box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
       display: flex;
       align-items: center;
-      transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      transition: top 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
       position: absolute;
-      opacity: 0.7;
       z-index: 5;
       top: 10%;
       left: 50%;
@@ -1320,7 +1319,7 @@ canvas {
         resize: none;
         margin: 0.5em 0 1.2em;
         border: 1px solid #ced4da;
-        transition: all 0.025s ease-in-out;
+        transition: border-color 0.05s ease-in-out, box-shadow 0.05s ease-in-out;
         &:focus {
           border-color: #1788ae;
           box-shadow: 0 0 0 0.2rem rgba(23, 136, 174, 0.25);
@@ -1332,7 +1331,7 @@ canvas {
         font-family: inherit;
         margin-top: 1em;
         color: white;
-        transition: all 0.25s ease-in-out;
+        transition: transform 0.25s ease-in-out;
         cursor: pointer;
 
         &:hover {
@@ -1340,7 +1339,7 @@ canvas {
         }
 
         &.sent {
-          background-color: #47A248;
+          background-color: #47a248;
         }
 
         &.notSent {
@@ -1368,6 +1367,7 @@ footer {
     position: relative;
     z-index: 4;
 
+    
     span {
       background: #1788ae;
       color: var(--light);
@@ -1376,7 +1376,8 @@ footer {
       box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
       display: flex;
       align-items: center;
-      transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      transition: left 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55),
+        opacity 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
       position: absolute;
       opacity: 0;
       z-index: -5;
@@ -1404,6 +1405,33 @@ footer {
         left: 110%;
         opacity: 1;
       }
+    }
+  }
+
+  .social-links {
+    display: flex;
+    width: max-content;
+    margin: 0 auto;
+    margin-top: 1em;
+    font-size: 1.25em;
+    li {
+      a {
+        color: rgb(136, 136, 136);
+        color: #1788ae;
+
+        @media (min-width: 650px) {
+          i {
+            transition: transform 0.2s ease-in-out;
+            &:hover {
+              transform: scale(1.15);
+            }
+          }
+        }
+      }
+    }
+
+    li + li {
+      margin-left: 1.5em;
     }
   }
 }
