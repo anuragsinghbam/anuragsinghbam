@@ -51,7 +51,6 @@ latestWorksArrow.addEventListener('click', (e) => {
 })
 
 blackLogo.addEventListener('click', (e) => {
-  
   scrollTo(0, 0)
 })
 
@@ -59,13 +58,34 @@ contactForm.addEventListener('submit', (e) => {
   e.preventDefault()
   let myForm = contactForm
   let formData = new FormData(myForm)
+  const buttonText = sendButton.innerHTML
   fetch('/', {
     method: 'POST',
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: new URLSearchParams(formData).toString()
-  }).then(() => console.log('Form successfully submitted')).catch((error) =>
-    alert(error))
-  sendButton.innerHTML = 'Sent'
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: new URLSearchParams(formData).toString(),
+  })
+    .then(() => {
+      sendButton.classList.add('sent')
+      sendButton.innerHTML = 'Message Sent'
+    })
+    .catch((error) => {
+      sendButton.classList.add('notSent')
+      sendButton.innerHTML = `Something went wrong!`
+      console.log(error);
+    })
+    .finally(() => {
+      setTimeout(() => {
+        sendButton.classList.remove('sent')
+        sendButton.classList.remove('notSent')
+        sendButton.innerHTML = buttonText
+      }, 5000)
+    })
+
+  Array.from(contactForm.children).forEach((child, i) => {
+    if (i % 2) {
+      child.value = ''
+    }
+  })
 })
 
 // window.scrollTo(0,document.body.scrollHeight);

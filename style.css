@@ -1499,14 +1499,22 @@ canvas {
   font-family: inherit;
   margin-top: 1em;
   color: white;
-  -webkit-transition: all 0.1s ease-in-out;
-  transition: all 0.1s ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
   cursor: pointer;
 }
 
 .contact-section .contact-form form button:hover {
   -webkit-transform: scale(1.025);
           transform: scale(1.025);
+}
+
+.contact-section .contact-form form button.sent {
+  background-color: #47A248;
+}
+
+.contact-section .contact-form form button.notSent {
+  background-color: #f83d3d;
 }
 
 footer {
