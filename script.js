@@ -9,6 +9,8 @@ const latestWorks = document.querySelector('.latest-works-link')
 const downArrow = document.querySelector('.down-arrow')
 const latestWorksArrow = document.querySelector('.latest-works-arrow')
 const blackLogo = document.querySelector('.black-logo')
+const contactForm = document.querySelector('.contact')
+const sendButton = document.querySelector('.submit-btn')
 
 aboutMeBtn.addEventListener('click', () => {
   aboutSection.classList.add('active')
@@ -49,7 +51,21 @@ latestWorksArrow.addEventListener('click', (e) => {
 })
 
 blackLogo.addEventListener('click', (e) => {
+  
   scrollTo(0, 0)
+})
+
+contactForm.addEventListener('submit', (e) => {
+  e.preventDefault()
+  let myForm = contactForm
+  let formData = new FormData(myForm)
+  fetch('/', {
+    method: 'POST',
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams(formData).toString()
+  }).then(() => console.log('Form successfully submitted')).catch((error) =>
+    alert(error))
+  sendButton.innerHTML = 'Sent'
 })
 
 // window.scrollTo(0,document.body.scrollHeight);
