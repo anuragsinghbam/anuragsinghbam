@@ -313,6 +313,19 @@ canvas {
           width: 65%;
           margin: 0 auto;
 
+          ul {
+            display: flex;
+            flex-wrap: wrap;
+            font-size: 0.85em;
+            li {
+              border: 1px solid #444;
+              padding: 0.4em 0.8em;
+              border-radius: 50px;
+              margin-bottom: 0.5em;
+              margin-right: 0.5em;
+            }
+          }
+
           .about-me-title {
             color: #2694d4;
             // color: #666AF6;
@@ -1178,6 +1191,13 @@ canvas {
             width: 85%;
             object-fit: cover;
             border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
+            transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+
+            &:hover {
+              box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+              transform: scale(1.05);
+            }
           }
         }
 

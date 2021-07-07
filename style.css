@@ -368,6 +368,23 @@ canvas {
   margin: 0 auto;
 }
 
+.main-section .hero-section .about-section .about-me .about-me-text ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  font-size: 0.85em;
+}
+
+.main-section .hero-section .about-section .about-me .about-me-text ul li {
+  border: 1px solid #444;
+  padding: 0.4em 0.8em;
+  border-radius: 50px;
+  margin-bottom: 0.5em;
+  margin-right: 0.5em;
+}
+
 .main-section .hero-section .about-section .about-me .about-me-text .about-me-title {
   color: #2694d4;
 }
@@ -1326,6 +1343,19 @@ canvas {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 50%;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
+  -webkit-transition: -webkit-box-shadow 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  transition: -webkit-box-shadow 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+  transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out, -webkit-box-shadow 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+}
+
+.testimonial-section .swiper-container .swiper-slide .swiper-card .testimonial-image img:hover {
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 .testimonial-section .swiper-container .swiper-slide .swiper-card .testimonial-text {
