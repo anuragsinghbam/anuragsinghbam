@@ -75,16 +75,17 @@ contactForm.addEventListener('submit', (e) => {
       console.log(error)
     })
     .finally(() => {
-      Array.from(contactForm.children).forEach((child, i) => {
-        if (i % 2) {
-          child.value = ''
-        }
-      })
       setTimeout(() => {
         sendButton.classList.remove('sent')
         sendButton.classList.remove('notSent')
         sendButton.innerHTML = buttonText
       }, 3000)
+    })
+
+    Array.from(contactForm.children).forEach((child, i) => {
+      if (i % 2) {
+        child.value = ''
+      }
     })
 })
 
