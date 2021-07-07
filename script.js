@@ -67,25 +67,25 @@ contactForm.addEventListener('submit', (e) => {
     .then(() => {
       sendButton.classList.add('sent')
       sendButton.innerHTML = 'Message Sent'
+      
     })
     .catch((error) => {
       sendButton.classList.add('notSent')
       sendButton.innerHTML = `Something went wrong!`
-      console.log(error);
+      console.log(error)
     })
     .finally(() => {
+      Array.from(contactForm.children).forEach((child, i) => {
+        if (i % 2) {
+          child.value = ''
+        }
+      })
       setTimeout(() => {
         sendButton.classList.remove('sent')
         sendButton.classList.remove('notSent')
         sendButton.innerHTML = buttonText
-      }, 5000)
+      }, 3000)
     })
-
-  Array.from(contactForm.children).forEach((child, i) => {
-    if (i % 2) {
-      child.value = ''
-    }
-  })
 })
 
 // window.scrollTo(0,document.body.scrollHeight);
