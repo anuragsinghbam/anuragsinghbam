@@ -602,6 +602,12 @@ canvas {
   margin-left: 4px;
 }
 
+@media (max-width: 650px) {
+  .main-section .social-links .facebook-icon {
+    margin-left: 2px;
+  }
+}
+
 .main-section .social-links.hidden {
   opacity: 0;
   pointer-events: none;
@@ -609,10 +615,13 @@ canvas {
 
 @media (max-width: 650px) {
   .main-section .social-links {
-    font-size: 1.25em;
+    font-size: 1.5em;
   }
   .main-section .social-links i {
     color: #c3c5d4;
+  }
+  .main-section .social-links li + li {
+    margin-top: 0.75em;
   }
 }
 
@@ -1456,7 +1465,7 @@ canvas {
 
 .contact-section .contact-form .contact-img img {
   width: 100%;
-  max-width: 500px;
+  max-width: 700px;
 }
 
 .contact-section .contact-form form {
