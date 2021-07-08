@@ -237,7 +237,7 @@ canvas {
       @media (max-width: 650px) {
         .name-logo {
           width: 350px;
-          top: -6em;
+          top: -2em;
         }
       }
 
@@ -380,6 +380,10 @@ canvas {
               width: 90%;
               margin: 0 auto;
               text-align: justify;
+            }
+
+            .about-me-detail + .about-me-detail {
+              margin-top: 0.75em;
             }
           }
 
@@ -633,6 +637,10 @@ canvas {
     transition: transform 0.1s ease-in-out;
     z-index: 10;
 
+    @media (max-width: 300px) {
+      font-size: 1em;
+    }
+
     &:hover {
       transform: translate(-50%, 0) scale(1.1);
     }
@@ -679,7 +687,7 @@ canvas {
 
 @media (max-width: 650px) {
   .main-section {
-    font-size: 0.8em;
+    font-size: 0.9em;
   }
 }
 
@@ -1113,7 +1121,7 @@ canvas {
 
 @media (max-width: 650px) {
   .work-section {
-    font-size: 0.8em;
+    font-size: 0.9em;
 
     h2 {
       font-size: 2em;

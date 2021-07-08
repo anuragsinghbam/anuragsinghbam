@@ -11,6 +11,8 @@ const latestWorksArrow = document.querySelector('.latest-works-arrow')
 const blackLogo = document.querySelector('.black-logo')
 const contactForm = document.querySelector('.contact')
 const sendButton = document.querySelector('.submit-btn')
+const mainSection = document.querySelector('.main-section')
+
 
 aboutMeBtn.addEventListener('click', () => {
   aboutSection.classList.add('active')
@@ -35,19 +37,19 @@ overlay.addEventListener('click', () => {
 })
 
 canvas.addEventListener('wheel', (e) => {
-  window.scrollTo(0, (window.innerHeight * e.deltaY) / Math.abs(e.deltaY) + 5)
+  window.scrollTo(0, (mainSection.clientHeight * e.deltaY) / Math.abs(e.deltaY) )
 })
 
 latestWorks.addEventListener('click', (e) => {
-  scrollTo(0, window.innerHeight + 5)
+  scrollTo(0, mainSection.clientHeight )
 })
 
 downArrow.addEventListener('click', (e) => {
-  scrollTo(0, window.innerHeight + 5)
+  scrollTo(0, mainSection.clientHeight )
 })
 
 latestWorksArrow.addEventListener('click', (e) => {
-  scrollTo(0, window.innerHeight + 5)
+  scrollTo(0, mainSection.clientHeight )
 })
 
 blackLogo.addEventListener('click', (e) => {

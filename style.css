@@ -266,7 +266,7 @@ canvas {
 @media (max-width: 650px) {
   .main-section .hero-section .hero-section-text .name-logo {
     width: 350px;
-    top: -6em;
+    top: -2em;
   }
 }
 
@@ -439,6 +439,9 @@ canvas {
     width: 90%;
     margin: 0 auto;
     text-align: justify;
+  }
+  .main-section .hero-section .about-section .about-me .about-me-text .about-me-detail + .about-me-detail {
+    margin-top: 0.75em;
   }
 }
 
@@ -718,6 +721,12 @@ canvas {
   z-index: 10;
 }
 
+@media (max-width: 300px) {
+  .main-section .latest-works-link {
+    font-size: 1em;
+  }
+}
+
 .main-section .latest-works-link:hover {
   -webkit-transform: translate(-50%, 0) scale(1.1);
           transform: translate(-50%, 0) scale(1.1);
@@ -762,7 +771,7 @@ canvas {
 
 @media (max-width: 650px) {
   .main-section {
-    font-size: 0.8em;
+    font-size: 0.9em;
   }
 }
 
@@ -1242,7 +1251,7 @@ canvas {
 
 @media (max-width: 650px) {
   .work-section {
-    font-size: 0.8em;
+    font-size: 0.9em;
   }
   .work-section h2 {
     font-size: 2em;
