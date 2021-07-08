@@ -327,14 +327,13 @@ canvas {
           }
 
           .about-me-title {
-            color: #2694d4;
-            // color: #666AF6;
+            color: #1788ae;
           }
 
           .mern {
             margin-bottom: 2.2em;
-            margin-top: 2.5em;
-            color: #2694d4;
+            margin-top: 2em;
+            color: #1788ae;
             // color: #666AF6;
           }
 
@@ -1395,7 +1394,6 @@ footer {
     position: relative;
     z-index: 4;
 
-    
     span {
       background: #1788ae;
       color: var(--light);
@@ -1409,7 +1407,7 @@ footer {
       position: absolute;
       opacity: 0;
       z-index: -5;
-      left: 0%;
+      left: -5px;
       transform: translate(0%, 15%);
       width: max-content;
       svg {

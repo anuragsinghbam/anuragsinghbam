@@ -386,13 +386,13 @@ canvas {
 }
 
 .main-section .hero-section .about-section .about-me .about-me-text .about-me-title {
-  color: #2694d4;
+  color: #1788ae;
 }
 
 .main-section .hero-section .about-section .about-me .about-me-text .mern {
   margin-bottom: 2.2em;
-  margin-top: 2.5em;
-  color: #2694d4;
+  margin-top: 2em;
+  color: #1788ae;
 }
 
 .main-section .hero-section .about-section .about-me .about-me-text .top-skills-icons {
@@ -1623,7 +1623,7 @@ footer .black-logo span {
   position: absolute;
   opacity: 0;
   z-index: -5;
-  left: 0%;
+  left: -5px;
   -webkit-transform: translate(0%, 15%);
           transform: translate(0%, 15%);
   width: -webkit-max-content;

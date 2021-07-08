@@ -13,13 +13,13 @@ const contactForm = document.querySelector('.contact')
 const sendButton = document.querySelector('.submit-btn')
 const mainSection = document.querySelector('.main-section')
 
-
 aboutMeBtn.addEventListener('click', () => {
   aboutSection.classList.add('active')
   overlay.classList.add('active')
   navbar.classList.add('hidden')
   navbar.classList.add('hidden')
   socialIcons.classList.add('hidden')
+  disableScroll()
 })
 
 xIcon.addEventListener('click', () => {
@@ -27,6 +27,7 @@ xIcon.addEventListener('click', () => {
   overlay.classList.remove('active')
   navbar.classList.remove('hidden')
   socialIcons.classList.remove('hidden')
+  enableScroll()
 })
 
 overlay.addEventListener('click', () => {
@@ -34,22 +35,23 @@ overlay.addEventListener('click', () => {
   overlay.classList.remove('active')
   navbar.classList.remove('hidden')
   socialIcons.classList.remove('hidden')
+  enableScroll()
 })
 
 canvas.addEventListener('wheel', (e) => {
-  window.scrollTo(0, (mainSection.clientHeight * e.deltaY) / Math.abs(e.deltaY) )
+  window.scrollTo(0, (mainSection.clientHeight * e.deltaY) / Math.abs(e.deltaY))
 })
 
 latestWorks.addEventListener('click', (e) => {
-  scrollTo(0, mainSection.clientHeight )
+  scrollTo(0, mainSection.clientHeight)
 })
 
 downArrow.addEventListener('click', (e) => {
-  scrollTo(0, mainSection.clientHeight )
+  scrollTo(0, mainSection.clientHeight)
 })
 
 latestWorksArrow.addEventListener('click', (e) => {
-  scrollTo(0, mainSection.clientHeight )
+  scrollTo(0, mainSection.clientHeight)
 })
 
 blackLogo.addEventListener('click', (e) => {
@@ -84,19 +86,12 @@ contactForm.addEventListener('submit', (e) => {
       }, 3000)
     })
 
-    Array.from(contactForm.children).forEach((child, i) => {
-      if (!(i % 2)) {
-        child.value = ''
-      }
-    })
+  Array.from(contactForm.children).forEach((child, i) => {
+    if (!(i % 2)) {
+      child.value = ''
+    }
+  })
 })
-
-// window.scrollTo(0,document.body.scrollHeight);
-
-// new GitHubCalendar('.calendar', 'anuragsinghbam', {
-//   responsive: true,
-//   tooltips: true,
-// })
 
 var swiper = new Swiper('.mySwiper', {
   loop: true,
@@ -121,3 +116,54 @@ var swiper = new Swiper('.mySwiper', {
     slideShadows: false,
   },
 })
+
+// left: 37, up: 38, right: 39, down: 40,
+// spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
+var keys = { 37: 1, 38: 1, 39: 1, 40: 1 }
+
+function preventDefault(e) {
+  e.preventDefault()
+}
+
+function preventDefaultForScrollKeys(e) {
+  if (keys[e.keyCode]) {
+    preventDefault(e)
+    return false
+  }
+}
+
+// modern Chrome requires { passive: false } when adding event
+var supportsPassive = false
+try {
+  window.addEventListener(
+    'test',
+    null,
+    Object.defineProperty({}, 'passive', {
+      get: function () {
+        supportsPassive = true
+      },
+    })
+  )
+} catch (e) {}
+
+var wheelOpt = supportsPassive ? { passive: false } : false
+var wheelEvent =
+  'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel'
+
+// call this to Disable
+function disableScroll() {
+  window.addEventListener('DOMMouseScroll', preventDefault, false) // older FF
+  window.addEventListener(wheelEvent, preventDefault, wheelOpt) // modern desktop
+  window.addEventListener('touchmove', preventDefault, wheelOpt) // mobile
+  window.addEventListener('keydown', preventDefaultForScrollKeys, false)
+  console.log('Scroll Disabled');
+}
+
+// call this to Enable
+function enableScroll() {
+  window.removeEventListener('DOMMouseScroll', preventDefault, false)
+  window.removeEventListener(wheelEvent, preventDefault, wheelOpt)
+  window.removeEventListener('touchmove', preventDefault, wheelOpt)
+  window.removeEventListener('keydown', preventDefaultForScrollKeys, false)
+  console.log('Scroll Enabled');
+}
