@@ -57,6 +57,7 @@ canvas {
   margin: 0 auto;
   max-width: 1600px;
   pointer-events: none;
+  color: #3675eb;
 }
 
 .main-section .hero-section .navbar {
@@ -971,6 +972,12 @@ canvas {
 
 .work-section .project .project-details p {
   text-align: justify;
+}
+
+.work-section .project .project-details .construction {
+  display: inline-block;
+  font-size: 0.75em;
+  color: #999;
 }
 
 .work-section .project .circle-dot {
