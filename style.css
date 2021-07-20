@@ -624,16 +624,6 @@ canvas {
           transform: scale(1.1);
 }
 
-.main-section .social-links .facebook-icon {
-  margin-left: 4px;
-}
-
-@media (max-width: 650px) {
-  .main-section .social-links .facebook-icon {
-    margin-left: 2px;
-  }
-}
-
 .main-section .social-links.hidden {
   opacity: 0;
   pointer-events: none;
@@ -1384,6 +1374,7 @@ canvas {
 .testimonial-section .swiper-container .swiper-slide .swiper-card .testimonial-text h2,
 .testimonial-section .swiper-container .swiper-slide .swiper-card .testimonial-text h5 {
   text-align: right;
+  color: #1788ae;
   margin: 0;
 }
 

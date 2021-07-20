@@ -545,13 +545,6 @@ canvas {
       transform: scale(1.1);
     }
 
-    .facebook-icon {
-      margin-left: 4px;
-
-      @media (max-width: 650px) {
-        margin-left: 2px;
-      }
-    }
 
     &.hidden {
       opacity: 0;
@@ -1224,6 +1217,8 @@ canvas {
           h2,
           h5 {
             text-align: right;
+            color: #1788ae;
+
             margin: 0;
           }
 
