@@ -1292,6 +1292,7 @@ canvas {
 .testimonial-section .swiper-container {
   max-width: 1000px;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .testimonial-section .swiper-container .swiper-wrapper {
