@@ -963,12 +963,6 @@ canvas {
   text-align: justify;
 }
 
-.work-section .project .project-details .construction {
-  display: inline-block;
-  font-size: 0.75em;
-  color: #999;
-}
-
 .work-section .project .circle-dot {
   width: 15px;
   height: 15px;
