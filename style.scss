@@ -932,6 +932,30 @@ canvas {
     }
   }
 
+  .project0 {
+    border-radius: 10px;
+
+    .circle-dot {
+      border-color: #fc815c;
+    }
+
+    h3 {
+      color: #fc815c;
+
+      + span {
+        color: #fc815c;
+      }
+    }
+
+    .visit-site {
+      background-color: #fc815c;
+    }
+
+    .circle-extension {
+      background-color: #fc815c;
+    }
+  }
+
   .project1 {
     border-radius: 10px;
 
