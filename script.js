@@ -170,7 +170,7 @@ function enableScroll() {
 
 document.addEventListener('DOMContentLoaded', () => {
   const observer = new MutationObserver((mutations) => {
-    const chatSupport = document.querySelector('.chatsupport-container .cs-by')
+    const chatSupport = document.querySelector('.cs-by')
     if (chatSupport) {
       chatSupport.children[0].innerText = 'Chat on'
       chatSupport.children[1].children[0].childNodes[1].nodeValue = 'WhatsApp'
