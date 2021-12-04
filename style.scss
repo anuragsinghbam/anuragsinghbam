@@ -28,6 +28,18 @@ body {
   box-sizing: border-box;
 }
 
+.chatsupport-container.chatsupport-conversation {
+  .cs-by {
+    visibility: hidden;
+
+    img {
+      transform: scale(1.25);
+      margin-top: 2px !important;
+      margin-left: 0 !important;
+    }
+  }
+}
+
 a {
   color: var(--light);
   text-decoration: none;
@@ -545,7 +557,6 @@ canvas {
       transform: scale(1.1);
     }
 
-
     &.hidden {
       opacity: 0;
       pointer-events: none;
@@ -992,8 +1003,6 @@ canvas {
         color: #47afa1;
       }
     }
-
-    
 
     .visit-site {
       background-color: #47afa1;

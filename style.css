@@ -27,6 +27,17 @@ body {
           box-sizing: border-box;
 }
 
+.chatsupport-container.chatsupport-conversation .cs-by {
+  visibility: hidden;
+}
+
+.chatsupport-container.chatsupport-conversation .cs-by img {
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
+  margin-top: 2px !important;
+  margin-left: 0 !important;
+}
+
 a {
   color: var(--light);
   text-decoration: none;
@@ -614,17 +625,18 @@ canvas {
   color: #b0b2c3;
   -webkit-transition: color 0.1s ease-in-out, -webkit-transform 0.1s ease-in-out;
   transition: color 0.1s ease-in-out, -webkit-transform 0.1s ease-in-out;
-  transition: color 0.1s ease-in-out, transform 0.1s ease-in-out;
-  transition: color 0.1s ease-in-out, transform 0.1s ease-in-out, -webkit-transform 0.1s ease-in-out;
+  transition: color 0.1s ease-in-ouorm 0.1s ease-in-out, -webkit-transform 0.1s ease-in-out;
 }
-
 .main-section .social-links li:hover i {
   color: var(--light);
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
-
-.maidia (max-width: 650px) {
+.main-section .social-links.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+@media (max-width: 650px) {
   .main-section .social-links {
     font-size: 1.5em;
   }
@@ -2006,7 +2018,7 @@ footer .social-links li + li {
             transform: scale(1.1) translate3d(0em, 0, 0);
   }
 }
-/*# sourceMappingURL=style.css.map */rm: scale(1.1) translate3d(-0.05em, 0, 0);
+/*# sourceMappingURL=style.css.map */orm: scale(1.1) translate3d(-0.05em, 0, 0);
   }
   46% {
     -webkit-transform: scale(1.1) translate3d(0em, 0, 0);

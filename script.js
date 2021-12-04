@@ -156,7 +156,7 @@ function disableScroll() {
   window.addEventListener(wheelEvent, preventDefault, wheelOpt) // modern desktop
   window.addEventListener('touchmove', preventDefault, wheelOpt) // mobile
   window.addEventListener('keydown', preventDefaultForScrollKeys, false)
-  console.log('Scroll Disabled');
+  console.log('Scroll Disabled')
 }
 
 // call this to Enable
@@ -165,5 +165,24 @@ function enableScroll() {
   window.removeEventListener(wheelEvent, preventDefault, wheelOpt)
   window.removeEventListener('touchmove', preventDefault, wheelOpt)
   window.removeEventListener('keydown', preventDefaultForScrollKeys, false)
-  console.log('Scroll Enabled');
+  console.log('Scroll Enabled')
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  const observer = new MutationObserver((mutations) => {
+    const chatSupport = document.querySelector('.chatsupport-container .cs-by')
+    if (chatSupport) {
+      chatSupport.children[0].innerText = 'Chat on'
+      chatSupport.children[1].children[0].childNodes[1].nodeValue = 'WhatsApp'
+      chatSupport.children[1].children[0].childNodes[0].src =
+        './images/whatsapp-green.svg'
+      chatSupport.children[1].childNodes[0].href =
+        'https://api.whatsapp.com/send/?phone=919918390847&text=Hi+Anurag&app_absent=0'
+      chatSupport.style.visibility = 'visible'
+    }
+  })
+
+  observer.observe(document.body, {
+    childList: true,
+  })
+})
