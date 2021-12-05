@@ -27,10 +27,6 @@ body {
           box-sizing: border-box;
 }
 
-.chatsupport-wrp .cs-by {
-  visibility: hidden;
-}
-
 .chatsupport-wrp .cs-by img {
   -webkit-transform: scale(1.25);
           transform: scale(1.25);
@@ -626,8 +622,7 @@ canvas {
   -webkit-transition: color 0.1s ease-in-out, -webkit-transform 0.1s ease-in-out;
   transition: color 0.1s ease-in-out, -webkit-transform 0.1s ease-in-out;
   transition: color 0.1s ease-in-out, transform 0.1s ease-in-out;
-  transition: color 0.1s ease-iain-section .social-links li:hover i {
-  color: var(--light);
+  transition: color 0.1s ease-in-out, transform 0.1s ease-in-out, -webkit-transforr(--light);
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
@@ -2017,7 +2012,7 @@ footer .social-links li + li {
             transform: scale(1.1) translate3d(0em, 0, 0);
   }
 }
-/*# sourceMappingURL=style.css.map */orm: scale(1.1) translate3d(-0.05em, 0, 0);
+/*# sourceMappingURL=style.css.map */rm: scale(1.1) translate3d(-0.05em, 0, 0);
   }
   46% {
     -webkit-transform: scale(1.1) translate3d(0em, 0, 0);
