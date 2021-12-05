@@ -170,16 +170,7 @@ function enableScroll() {
 
 document.addEventListener('DOMContentLoaded', () => {
   const observer = new MutationObserver((mutations) => {
-    const chatSupport = document.querySelector('.cs-by')
-    if (chatSupport) {
-      chatSupport.children[0].innerText = 'Chat on'
-      chatSupport.children[1].children[0].childNodes[1].nodeValue = 'WhatsApp'
-      chatSupport.children[1].children[0].childNodes[0].src =
-        './images/whatsapp-green.svg'
-      chatSupport.children[1].childNodes[0].href =
-        'https://api.whatsapp.com/send/?phone=919918390847&text=Hi+Anurag&app_absent=0'
-      chatSupport.style.visibility = 'visible'
-    }
+    
   })
 
   observer.observe(document.body, {
