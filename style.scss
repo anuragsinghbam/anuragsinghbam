@@ -28,18 +28,6 @@ body {
   box-sizing: border-box;
 }
 
-.chatsupport-wrp {
-  .cs-by {
-    // visibility: hidden;
-
-    img {
-      transform: scale(1.25);
-      margin-top: 2px !important;
-      margin-left: 0 !important;
-    }
-  }
-}
-
 a {
   color: var(--light);
   text-decoration: none;

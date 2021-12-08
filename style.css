@@ -19,19 +19,12 @@ html {
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
 }
 
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-}
-
-.chatsupport-wrp .cs-by img {
-  -webkit-transform: scale(1.25);
-          transform: scale(1.25);
-  margin-top: 2px !important;
-  margin-left: 0 !important;
 }
 
 a {
@@ -58,14 +51,12 @@ canvas {
   color: var(--light);
   height: 100vh;
 }
-
 .main-section .hero-section {
   width: 80%;
   margin: 0 auto;
   max-width: 1600px;
   pointer-events: none;
 }
-
 .main-section .hero-section .navbar {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -87,9 +78,8 @@ canvas {
           transform: translateX(-50%);
   top: 0;
 }
-
 .main-section .hero-section .navbar .logo {
-  font-family: 'Dancing Script', cursive;
+  font-family: "Dancing Script", cursive;
   font-size: 1.5em;
   font-weight: 700;
   pointer-events: all;
@@ -97,72 +87,58 @@ canvas {
   -webkit-transition: opacity 0.1s ease-in-out;
   transition: opacity 0.1s ease-in-out;
 }
-
 .main-section .hero-section .navbar .logo:hover {
   opacity: 0.8;
 }
-
 .main-section .hero-section .navbar .logo a {
   display: block;
 }
-
 .main-section .hero-section .navbar h2 {
   margin-top: 0.5em;
 }
-
 .main-section .hero-section .navbar.hidden {
   opacity: 0;
   pointer-events: none;
 }
-
 .main-section .hero-section .navbar .nav-links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   pointer-events: all;
 }
-
 .main-section .hero-section .navbar .nav-links div {
   cursor: pointer;
 }
-
 .main-section .hero-section .navbar .nav-links .moon-icon {
   display: none;
 }
-
 .main-section .hero-section .navbar .nav-links .phone-icon:hover {
   -webkit-animation: shake 4s ease-in-out infinite;
           animation: shake 4s ease-in-out infinite;
 }
-
 .main-section .hero-section .navbar .nav-links .whatsapp-icon-img {
   -webkit-transition: -webkit-transform 0.2s ease-in-out;
   transition: -webkit-transform 0.2s ease-in-out;
   transition: transform 0.2s ease-in-out;
   transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
 }
-
 .main-section .hero-section .navbar .nav-links .whatsapp-icon-img:hover {
   -webkit-animation: popShake 4s ease-in-out infinite;
           animation: popShake 4s ease-in-out infinite;
 }
-
 .main-section .hero-section .navbar .nav-links .sun-icon-img {
   -webkit-transition: -webkit-transform 0.2s;
   transition: -webkit-transform 0.2s;
   transition: transform 0.2s;
   transition: transform 0.2s, -webkit-transform 0.2s;
 }
-
 .main-section .hero-section .navbar .nav-links .sun-icon-img:hover {
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
 }
-
 .main-section .hero-section .navbar .nav-links div + div {
   margin-left: 2.5em;
 }
-
 .main-section .hero-section .hero-section-text {
   position: absolute;
   top: 50%;
@@ -172,38 +148,32 @@ canvas {
   left: 0;
   z-index: 20;
 }
-
 .main-section .hero-section .hero-section-text .hero-content {
   width: 80%;
   max-width: 1170px;
   margin: 0 auto;
   padding: 0 2em;
 }
-
 .main-section .hero-section .hero-section-text .hero-content h1 {
   font-size: 4em;
-  font-family: 'Spartan', sans-serif;
+  font-family: "Spartan", sans-serif;
   margin: 0;
 }
-
 @media (max-width: 1000px) {
   .main-section .hero-section .hero-section-text .hero-content h1 {
     font-size: 3em;
   }
 }
-
 @media (max-width: 650px) {
   .main-section .hero-section .hero-section-text .hero-content h1 {
     font-size: 2em;
   }
 }
-
 .main-section .hero-section .hero-section-text .hero-content p {
-  font-family: 'Merriweather', serif;
+  font-family: "Merriweather", serif;
   font-style: italic;
   margin: 1.25em 0 2.25em;
 }
-
 .main-section .hero-section .hero-section-text .hero-content .about-me-btn {
   display: inline-block;
   background: -webkit-gradient(linear, right top, left top, from(#1595b6), to(rgba(31, 38, 103, 0.9)));
@@ -220,16 +190,13 @@ canvas {
   transition: transform 0.1s ease-in-out;
   transition: transform 0.1s ease-in-out, -webkit-transform 0.1s ease-in-out;
 }
-
 .main-section .hero-section .hero-section-text .hero-content .about-me-btn:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
-
 .main-section .hero-section .hero-section-text .hero-content .about-me-btn:hover .right-arrow {
   right: -25%;
 }
-
 .main-section .hero-section .hero-section-text .hero-content .right-arrow {
   position: absolute;
   top: 10%;
@@ -237,19 +204,16 @@ canvas {
   -webkit-transition: right 0.2s ease-in-out;
   transition: right 0.2s ease-in-out;
 }
-
 @media (max-width: 650px) {
   .main-section .hero-section .hero-section-text .hero-content .right-arrow {
     display: none;
   }
 }
-
 @media (max-width: 650px) {
   .main-section .hero-section .hero-section-text .hero-content {
     margin-top: 1.2em;
   }
 }
-
 .main-section .hero-section .hero-section-text .name-logo {
   position: absolute;
   top: 0;
@@ -259,24 +223,20 @@ canvas {
           transform: translate(-50%, -28%);
   z-index: -2;
 }
-
 .main-section .hero-section .hero-section-text .name-logo img {
   width: 100%;
 }
-
 @media (max-width: 1500px) {
   .main-section .hero-section .hero-section-text .name-logo {
     width: 500px;
   }
 }
-
 @media (max-width: 650px) {
   .main-section .hero-section .hero-section-text .name-logo {
     width: 350px;
     top: -2em;
   }
 }
-
 @media (max-width: 460px) {
   .main-section .hero-section .hero-section-text .name-logo {
     width: 300px;
@@ -284,20 +244,17 @@ canvas {
             transform: translate(-50%, -10%);
   }
 }
-
 @media (max-width: 360px) {
   .main-section .hero-section .hero-section-text .name-logo {
     width: 200px;
   }
 }
-
 @media (max-width: 650px) {
   .main-section .hero-section .hero-section-text {
     -webkit-transform: translateY(-60%);
             transform: translateY(-60%);
   }
 }
-
 .main-section .hero-section .about-section {
   width: 90%;
   max-width: 1200px;
@@ -320,7 +277,6 @@ canvas {
   transition: transform 0.2s ease-in-out, left 0.2s ease-in-out;
   transition: transform 0.2s ease-in-out, left 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
 }
-
 .main-section .hero-section .about-section .x-icon {
   background: #666af6;
   background: #27292d;
@@ -347,19 +303,16 @@ canvas {
   -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.75);
           box-shadow: 0 0 5px rgba(0, 0, 0, 0.75);
 }
-
 .main-section .hero-section .about-section .x-icon img {
   vertical-align: middle;
   width: 50%;
 }
-
 .main-section .hero-section .about-section .x-icon:hover {
   -webkit-transform: rotate(90deg) scale(1.05);
           transform: rotate(90deg) scale(1.05);
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
-
 .main-section .hero-section .about-section .about-me {
   width: 100%;
   display: -webkit-box;
@@ -369,12 +322,10 @@ canvas {
       -ms-flex-align: center;
           align-items: center;
 }
-
 .main-section .hero-section .about-section .about-me .about-me-text {
   width: 65%;
   margin: 0 auto;
 }
-
 .main-section .hero-section .about-section .about-me .about-me-text ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -383,7 +334,6 @@ canvas {
       flex-wrap: wrap;
   font-size: 0.85em;
 }
-
 .main-section .hero-section .about-section .about-me .about-me-text ul li {
   border: 1px solid #444;
   padding: 0.4em 0.8em;
@@ -391,17 +341,14 @@ canvas {
   margin-bottom: 0.5em;
   margin-right: 0.5em;
 }
-
 .main-section .hero-section .about-section .about-me .about-me-text .about-me-title {
   color: #1788ae;
 }
-
 .main-section .hero-section .about-section .about-me .about-me-text .mern {
   margin-bottom: 2.2em;
   margin-top: 2em;
   color: #1788ae;
 }
-
 .main-section .hero-section .about-section .about-me .about-me-text .top-skills-icons {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -409,29 +356,23 @@ canvas {
   margin-top: 1.5em;
   position: relative;
 }
-
 .main-section .hero-section .about-section .about-me .about-me-text .top-skills-icons h2 {
   margin-top: 0.5em;
 }
-
 .main-section .hero-section .about-section .about-me .about-me-text .top-skills-icons .mongodb-icon .tooltip {
   background-color: #47a248;
   color: var(--light);
 }
-
 .main-section .hero-section .about-section .about-me .about-me-text .top-skills-icons .express-icon .tooltip {
   background-color: var(--light);
 }
-
 .main-section .hero-section .about-section .about-me .about-me-text .top-skills-icons .react-icon .tooltip {
   background-color: #61dafb;
 }
-
 .main-section .hero-section .about-section .about-me .about-me-text .top-skills-icons .node-icon .tooltip {
   background-color: #8cc84b;
   margin-left: -2px;
 }
-
 @media (max-width: 1000px) {
   .main-section .hero-section .about-section .about-me .about-me-text .top-skills-icons {
     -webkit-box-pack: center;
@@ -439,7 +380,7 @@ canvas {
             justify-content: center;
   }
   .main-section .hero-section .about-section .about-me .about-me-text .about-me-title,
-  .main-section .hero-section .about-section .about-me .about-me-text .mern {
+.main-section .hero-section .about-section .about-me .about-me-text .mern {
     text-align: center;
   }
   .main-section .hero-section .about-section .about-me .about-me-text .about-me-detail {
@@ -451,7 +392,6 @@ canvas {
     margin-top: 0.75em;
   }
 }
-
 @media (max-width: 400px) {
   .main-section .hero-section .about-section .about-me .about-me-text .top-skills-icons {
     -webkit-box-pack: center;
@@ -464,7 +404,7 @@ canvas {
     height: 35px;
   }
   .main-section .hero-section .about-section .about-me .about-me-text .about-me-title,
-  .main-section .hero-section .about-section .about-me .about-me-text .mern {
+.main-section .hero-section .about-section .about-me .about-me-text .mern {
     text-align: center;
   }
   .main-section .hero-section .about-section .about-me .about-me-text .mern {
@@ -477,7 +417,6 @@ canvas {
     text-align: justify;
   }
 }
-
 .main-section .hero-section .about-section .about-me .about-me-text .top-skills-icons div {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -491,7 +430,6 @@ canvas {
           align-items: center;
   cursor: context-menu;
 }
-
 .main-section .hero-section .about-section .about-me .about-me-text .top-skills-icons div .tooltip {
   background-color: #8cc84b;
   color: var(--dark);
@@ -508,9 +446,8 @@ canvas {
   -webkit-transition: top 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55), opacity 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   transition: top 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55), opacity 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
-
 .main-section .hero-section .about-section .about-me .about-me-text .top-skills-icons div .tooltip::after {
-  content: '';
+  content: "";
   width: 12px;
   height: 12px;
   background: inherit;
@@ -519,28 +456,23 @@ canvas {
   position: absolute;
   bottom: -6px;
 }
-
 .main-section .hero-section .about-section .about-me .about-me-text .top-skills-icons div:hover .tooltip {
   opacity: 1;
   top: -3.25em;
 }
-
 .main-section .hero-section .about-section .about-me .about-me-text .top-skills-icons div + div {
   margin-left: 2em;
 }
-
 @media (max-width: 370px) {
   .main-section .hero-section .about-section .about-me {
     zoom: 90%;
   }
 }
-
 @media (max-width: 330px) {
   .main-section .hero-section .about-section .about-me {
     zoom: 85%;
   }
 }
-
 .main-section .hero-section .about-section .illustration {
   width: 100%;
   display: -webkit-box;
@@ -551,24 +483,20 @@ canvas {
           align-items: center;
   text-align: center;
 }
-
 .main-section .hero-section .about-section .illustration .coder-img {
   width: 100%;
 }
-
 @media (max-width: 1000px) {
   .main-section .hero-section .about-section .illustration .coder-img {
     width: 60%;
     min-width: 270px;
   }
 }
-
 @media (max-width: 760px) {
   .main-section .hero-section .about-section .illustration {
     display: none;
   }
 }
-
 @media (max-width: 1000px) {
   .main-section .hero-section .about-section {
     -webkit-box-orient: vertical;
@@ -588,20 +516,17 @@ canvas {
     width: 90% !important;
   }
 }
-
 @media (max-width: 400px) {
   .main-section .hero-section .about-section {
     padding: 1em 0;
   }
 }
-
 .main-section .hero-section .about-section.active {
   -webkit-transform: translate(-50%, -50%) scale(1);
           transform: translate(-50%, -50%) scale(1);
   left: 50%;
   pointer-events: all;
 }
-
 .main-section .social-links {
   position: absolute;
   font-size: 2em;
@@ -612,17 +537,18 @@ canvas {
   pointer-events: all;
   z-index: 22;
 }
-
 .main-section .social-links li + li {
   margin-top: 0.5em;
 }
-
 .main-section .social-links i {
   color: #b0b2c3;
   -webkit-transition: color 0.1s ease-in-out, -webkit-transform 0.1s ease-in-out;
   transition: color 0.1s ease-in-out, -webkit-transform 0.1s ease-in-out;
   transition: color 0.1s ease-in-out, transform 0.1s ease-in-out;
-  transition: color 0.1s ease-in-out, transform 0.1s ease-in-out, -webkit-transforr(--light);
+  transition: color 0.1s ease-in-out, transform 0.1s ease-in-out, -webkit-transform 0.1s ease-in-out;
+}
+.main-section .social-links li:hover i {
+  color: var(--light);
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
@@ -2006,13 +1932,6 @@ footer .social-links li + li {
   44% {
     -webkit-transform: scale(1.1) translate3d(-0.05em, 0, 0);
             transform: scale(1.1) translate3d(-0.05em, 0, 0);
-  }
-  46% {
-    -webkit-transform: scale(1.1) translate3d(0em, 0, 0);
-            transform: scale(1.1) translate3d(0em, 0, 0);
-  }
-}
-/*# sourceMappingURL=style.css.map */rm: scale(1.1) translate3d(-0.05em, 0, 0);
   }
   46% {
     -webkit-transform: scale(1.1) translate3d(0em, 0, 0);
