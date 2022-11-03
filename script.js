@@ -38,9 +38,9 @@ overlay.addEventListener('click', () => {
   enableScroll()
 })
 
-canvas.addEventListener('wheel', (e) => {
-  window.scrollTo(0, (mainSection.clientHeight * e.deltaY) / Math.abs(e.deltaY))
-})
+// canvas.addEventListener('wheel', (e) => {
+//   window.scrollTo(0, (mainSection.clientHeight * e.deltaY) / Math.abs(e.deltaY))
+// })
 
 latestWorks.addEventListener('click', (e) => {
   scrollTo(0, mainSection.clientHeight)
