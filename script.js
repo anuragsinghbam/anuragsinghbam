@@ -13,6 +13,34 @@ const contactForm = document.querySelector('.contact')
 const sendButton = document.querySelector('.submit-btn')
 const mainSection = document.querySelector('.main-section')
 
+//Sun and Moon icon document selector
+const icon = document.getElementById("icon")
+
+//form label selection
+var contact_section =  document.querySelector(".contact-section")
+var label1= contact_section.querySelector(".label1")
+var label2= contact_section.querySelector(".label2")
+var label3= contact_section.querySelector(".label3")
+
+
+//when icon is clicked theme is toggled
+icon.onclick = function () {
+  document.body.classList.toggle("dark-theme")
+
+  //if theme is dark then sun icon will be displayed
+  if (document.body.classList.contains("dark-theme")) {
+      icon.src = "images/sun.png"
+  }
+  //else moon icon will by default be displayed
+  else {
+      icon.src = "images/moon.png"
+  }
+  //if theme is dark then form label is white else will remain black
+  label1.style.color="white"
+  label2.style.color="white"
+  label3.style.color="white"
+}
+
 aboutMeBtn.addEventListener('click', () => {
   aboutSection.classList.add('active')
   overlay.classList.add('active')

@@ -31,6 +31,10 @@
             </a>
           </div>
           <div class="nav-links">
+            <!-- Theme toggle icons -->
+            <div class="theme-toggler">
+              <img src="images/moon.png" alt="Dark theme toggle" id="icon">
+            </div>
             <div class="phone-icon">
               <a href="https://topmate.io/anuragsingh" target="_blank"><img src="./images/phone.svg" alt="phone icon" draggable="false" /></a>
             </div>
@@ -573,9 +577,9 @@
         <div class="contact-img">
           <img src="./images/contact-me.svg" alt="constact image" draggable="false" />
         </div>
-
-        <form class="contact" name="contact" method="POST" netlify>
-          <label for="name">
+        <!-- class label1 ,label2,label3 added to form labels -->
+        <form class="contact" name="contact" method="POST" netlify class="form">
+          <label for="name" class="label1">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
               class="feather feather-user">
@@ -584,7 +588,7 @@
             </svg>
             Name</label>
           <input type="text" name="Name" id="name" required />
-          <label for="email">
+          <label for="email" class="label2">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
               class="feather feather-at-sign">
@@ -593,7 +597,7 @@
             </svg>
             Email</label>
           <input type="email" name="Email" id="email" required />
-          <label for="message">
+          <label for="message" class="label3">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
               class="feather feather-message-square">

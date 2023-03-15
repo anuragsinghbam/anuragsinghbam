@@ -7,6 +7,12 @@
   --light: #ffffff;
   --lightGrey: #ddd;
 }
+/* when dark theme toggle is pressed  */
+.dark-theme{
+  background-color: var(--lightDark);
+  color: var(--light);
+  transition: 0.3s ease-in-out;
+}
 
 html {
   scroll-behavior: smooth;
@@ -45,7 +51,12 @@ canvas {
       touch-action: auto;
   margin-bottom: -1em;
 }
-
+/* sun and moon icon for theme toggle */
+#icon {
+  width: 30px;
+  cursor: pointer;
+  color: var(--light);
+}
 .main-section {
   background: var(--dark);
   color: var(--light);
@@ -678,8 +689,8 @@ canvas {
   }
 }
 .work-section {
-  background: var(--light);
-  color: var(--dark);
+  /* background-color: var(--light);
+  color: var(--dark); */
   position: relative;
   margin: 0 auto;
 }
@@ -695,7 +706,7 @@ canvas {
   border-top: none;
   border-radius: 0 0 8px 8px;
   font-size: 2.5em;
-  background: var(--light);
+  background-color: var(--light);
   position: relative;
   z-index: 5;
   color: #1788ae;
@@ -858,7 +869,7 @@ canvas {
 .work-section .project .circle-dot {
   width: 15px;
   height: 15px;
-  background-color: var(--dark);
+  /* background-color: var(--dark); */
   background-color: var(--light);
   border: 3px solid #2694d4;
   position: absolute;
@@ -1172,7 +1183,8 @@ canvas {
   padding: 1em 0 2em;
 }
 .testimonial-section .swiper .swiper-slide .swiper-card {
-  display: -webkit-box;
+  background-color: var(--light);
+  display: -webkit-box; 
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
@@ -1186,7 +1198,6 @@ canvas {
   z-index: 6;
   width: 80%;
   position: relative;
-  background-color: var(--light);
 }
 .testimonial-section .swiper .swiper-slide .swiper-card .testimonial-image {
   -webkit-box-flex: 1;
@@ -1224,6 +1235,10 @@ canvas {
   text-align: right;
   color: #1788ae;
   margin: 0;
+}
+/* testimonial paragraph color theme */
+.testimonial-section p{
+  color:var(--lightDark);
 }
 .testimonial-section .swiper .swiper-slide .swiper-card .testimonial-text h5 {
   margin-top: 0.2em;
@@ -1363,7 +1378,7 @@ canvas {
 .contact-section .contact-form form textarea,
 .contact-section .contact-form form button {
   border: none;
-  background-color: #1788ae18;
+  background-color:var(--light);
   padding: 1em;
   border-radius: 5px;
   outline: none;
@@ -1381,6 +1396,10 @@ canvas {
   border-color: #1788ae;
   -webkit-box-shadow: 0 0 0 0.2rem rgba(23, 136, 174, 0.25);
           box-shadow: 0 0 0 0.2rem rgba(23, 136, 174, 0.25);
+}
+/* theme toggle for form label */
+.label{
+  color: var(--dark);
 }
 .contact-section .contact-form form button {
   background-color: #1788ae;
