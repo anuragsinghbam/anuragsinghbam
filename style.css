@@ -692,7 +692,7 @@ canvas {
   /* background-color: var(--light);
   color: var(--dark); */
   position: relative;
-  margin: 0 auto;
+  margin: 20px auto;
 }
 .work-section h2 {
   text-align: center;
@@ -702,8 +702,7 @@ canvas {
   margin: 0 auto;
   padding: 0.2em 0.5em;
   border: 2px solid #1788ae;
-  border: 2px solid #1788ae;
-  border-top: none;
+  border-top: 2px solid #1788ae;
   border-radius: 0 0 8px 8px;
   font-size: 2.5em;
   background-color: var(--light);
