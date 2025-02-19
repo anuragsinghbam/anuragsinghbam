@@ -12,6 +12,7 @@ const blackLogo = document.querySelector('.black-logo')
 const contactForm = document.querySelector('.contact')
 const sendButton = document.querySelector('.submit-btn')
 const mainSection = document.querySelector('.main-section')
+const currentYear = document.querySelector('#currentYear')
 
 //Sun and Moon icon document selector
 const icon = document.getElementById("icon")
@@ -205,3 +206,6 @@ document.addEventListener('DOMContentLoaded', () => {
     childList: true,
   })
 })
+
+
+currentYear.innerText = new Date().getFullYear();
