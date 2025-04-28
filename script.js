@@ -12,9 +12,47 @@ const blackLogo = document.querySelector('.black-logo')
 const contactForm = document.querySelector('.contact')
 const sendButton = document.querySelector('.submit-btn')
 const mainSection = document.querySelector('.main-section')
-
 //Sun and Moon icon document selector
 const icon = document.getElementById("icon")
+const formSection = document.querySelectorAll("form label") // selecting the labels inside the form
+const switchTheme = document.querySelector(".switch-theme");  // Button to switch theme
+let darkTheme = localStorage.getItem("darkMode");  // fetching the theme from local storage
+
+// all about enabling and disabling the dark theme
+
+switchTheme.addEventListener("click", (e) => {
+  darkTheme = localStorage.getItem("darkMode");
+  if(darkTheme != "active") {
+    enableDarkMode();
+  }
+  else {
+    disableDarkMode();
+  }
+});
+
+const enableDarkMode = () => {
+  document.body.classList.add("dark-theme");
+  switchTheme.children[0].classList.add("fa-sun");
+  switchTheme.children[0].classList.remove("fa-moon");
+  localStorage.setItem("darkMode", "active");
+
+  formSection.forEach(allLabels => {  //Apply the white color for label when the theme switch to dark
+    allLabels.style.color = "#fff"
+  });
+}
+
+if(darkTheme === "active")enableDarkMode();
+
+const disableDarkMode = () => {
+  document.body.classList.remove("dark-theme");
+  switchTheme.children[0].classList.remove("fa-sun");
+  switchTheme.children[0].classList.add("fa-moon");
+  localStorage.setItem("darkMode", null);
+
+  formSection.forEach(allLabels => {  //Returning back to the normal color for label when the theme switch to light
+    allLabels.style.color = "unset"
+  });
+}
 
 //form label selection
 var contact_section =  document.querySelector(".contact-section")

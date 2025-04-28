@@ -170,6 +170,9 @@ canvas {
   font-family: "Spartan", sans-serif;
   margin: 0;
 }
+.switch-theme i {
+  font-size: 24px;
+}
 @media (max-width: 1000px) {
   .main-section .hero-section .hero-section-text .hero-content h1 {
     font-size: 3em;
