@@ -1,0 +1,27 @@
+{
+  "folders": [
+	{
+		"path": "../../../../../practice-project"
+	},
+	{
+		"path": "../../project-folder"
+	},
+	{
+		"path": "../../git"
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "git",
+    "editor.cursorSmoothCaretAnimation": "off",
+    "terminal.integrated.tabs.enableAnimation": true,
+    "editor.smoothScrolling": false,
+    "animations.Tabs": "Flip",
+    "editor.stickyTabStops": false
+  },
+  "extensions": {
+    "recommendations": [
+      "ritwickdey.liveserver",
+      "brandonkirbyson.vscode-animations"
+    ]
+  }
+}
